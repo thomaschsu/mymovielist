@@ -3,11 +3,11 @@
   src: url("agrevuecyr.ttf");
 }
 
-.navbar-brand {
+.jumbo-title {
   font-family: "malFont";
   font-size: 30px;
-  line-height: 30px;
 }
-.nav {
-  margin-bottom: 50px;
+
+.jumbo-small {
+  font-size: 25px !important;
 }

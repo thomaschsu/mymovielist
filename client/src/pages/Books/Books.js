@@ -57,10 +57,16 @@ class Books extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          <Col size="md-12">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1 class="jumbo-small">Organize, Discuss, Discover</h1>
+              <h1 class="jumbo-title">MyMovieList</h1>
+              <h1 class="jumbo-small">How many movies have you seen?</h1>
             </Jumbotron>
+          </Col>
+        </Row>
+        <Row>
+          <Col size="md-6">
             <form>
               <Input
                 value={this.state.title}
@@ -89,9 +95,6 @@ class Books extends Component {
             </form>
           </Col>
           <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>Books On My List</h1>
-            </Jumbotron>
             {this.state.books.length ? (
               <List>
                 {this.state.books.map(book => (
