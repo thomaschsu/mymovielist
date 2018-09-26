@@ -61,7 +61,7 @@ class Books extends Component {
             <Jumbotron>
               <h1 class="jumbo-small">Organize, Discuss, Discover</h1>
               <h1 class="jumbo-title">MyMovieList</h1>
-              <h1 class="jumbo-small">How many movies have you seen?</h1>
+              <h1 class="jumbo-small">HOW MANY MOVIES HAVE YOU SEEN?</h1>
             </Jumbotron>
           </Col>
         </Row>
