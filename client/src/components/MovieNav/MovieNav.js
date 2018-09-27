@@ -15,6 +15,7 @@ const MovieNav = () => (
     <a className="menu-items" href="/ptw">
       Plan to Watch
     </a>
+    <a href="/search" className="menu-items"><i class="tiny material-icons">search</i></a>
   </div>
 );
 
