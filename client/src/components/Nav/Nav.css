@@ -21,4 +21,7 @@ nav {
 
 nav ul a.btn {
   margin-top: -16px;
+  background-color: transparent !important;
+  border: .5px solid #FFF;
+  border-radius: 5px;
 }
