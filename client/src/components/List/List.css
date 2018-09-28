@@ -38,4 +38,6 @@
 
 .list-group-item {
   display: table-row;
+  background-color: transparent;
+  border: none;
 }
