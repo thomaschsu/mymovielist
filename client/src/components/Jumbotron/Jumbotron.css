@@ -11,3 +11,10 @@
 .jumbo-small {
   font-size: 25px !important;
 }
+
+.jumbotron {
+  text-shadow: 1px 1px #000;
+  background-color: #337ab7;
+  color: #FFF;
+  border-radius: 5px;
+}
