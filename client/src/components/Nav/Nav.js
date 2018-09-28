@@ -4,9 +4,9 @@ import "./Nav.css";
 
 const Nav = () => (
   <nav className="bg-primary nav">
-    <Link className="navbar-brand" to="/">
+    <span className="navbar-brand" to="/">
       My<span class="nav-blue">Movie</span>List
-    </Link>
+    </span>
     <div>
       <ul className="navbar-nav right">
         <li
