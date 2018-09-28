@@ -7,7 +7,7 @@ const List = (props) => {
     <div className="list-overflow-container">
       <table>
 		  <thead>
-			<tr>
+			<tr className="table-head">
 				<th className="status"></th>
 				<th>Image</th>
 				<th>Movie Title</th>
