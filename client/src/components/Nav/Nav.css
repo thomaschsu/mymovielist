@@ -13,6 +13,7 @@
 nav {
   background-color: transparent !important;
   box-shadow: none !important;
+  text-shadow: 1px 1px #000;
 }
 
 .nav-blue {
@@ -24,4 +25,5 @@ nav ul a.btn {
   background-color: transparent !important;
   border: .5px solid #FFF;
   border-radius: 5px;
+  text-shadow: 1px 1px #000;
 }
