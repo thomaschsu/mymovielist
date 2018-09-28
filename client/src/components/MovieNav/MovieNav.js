@@ -17,7 +17,6 @@ const MovieNav = props => (
 		<Link className="menu-items" to="/ptw" onClick={props.function}>
 			Plan to Watch
 		</Link>
-		<a href="/search" className="menu-items"><i className="tiny material-icons">search</i></a>
     </div>
   </Router>
 );
