@@ -5,7 +5,7 @@ import "./Nav.css";
 const Nav = () => (
   <nav className="bg-primary nav">
     <Link className="navbar-brand" to="/">
-      MyMovieList
+      My<span class="nav-blue">Movie</span>List
     </Link>
     <div>
       <ul className="navbar-nav right">
@@ -42,6 +42,8 @@ const Nav = () => (
             Search
           </Link>
         </li>
+        <a className="waves-effect waves-light btn blue">Login</a>
+        <a className="waves-effect waves-light btn blue">Sign Up</a>
       </ul>
     </div>
   </nav>

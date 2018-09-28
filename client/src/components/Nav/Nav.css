@@ -11,5 +11,14 @@
 }
 
 nav {
-  background-color: #0277bd;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.nav-blue {
+  color: #337ab7;
+}
+
+nav ul a.btn {
+  margin-top: -16px;
 }
