@@ -28,7 +28,7 @@ const Nav = () => (
           }
         >
           <Link to="/movielist" className="nav-link">
-            Movie List
+            Your List
           </Link>
         </li>
         <li
