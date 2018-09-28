@@ -37,3 +37,20 @@ video {
 body {
     background-color: #222;
 }
+.link-effect {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.link-effect::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #337ab7;
+  transition: width 0.3s;
+}
+
+.link-effect:hover::after {
+  width: 100%;
+}

@@ -1,7 +1,12 @@
 .movie-menu {
     text-align: center;
     background-color: #eee;
-	padding: 10px 0;
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.movie-menu a{
+    text-decoration: none;
 }
 
 .menu-items {
@@ -9,7 +14,5 @@
 }
 
 .menu-items:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: 10px 20px;
     text-decoration: none;
 }
