@@ -6,7 +6,7 @@ const Home = () => (
     <video muted loop id="video" autoplay="autoplay">
       <source src="hero.mp4" type="video/mp4" />
     </video>
-    <h4 id="video-title">Discover Movies</h4>
+    <span id="spin"></span><h4 id="video-title">Movies</h4>
   </div>
 );
 
