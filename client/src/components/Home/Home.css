@@ -34,3 +34,6 @@ video {
   75% { content: "Track" }
   100% { content: "Share" }
 }
+body {
+    background-color: #222;
+}
