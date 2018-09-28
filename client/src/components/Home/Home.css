@@ -29,8 +29,8 @@ video {
   animation: spin 5s linear infinite;
 }
 @keyframes spin {
-  40% { content: "Discover" }
-  60% { content: "Experience" }
-  80% { content: "Track" }
-  90% { content: "Share" }
+  25% { content: "Discover" }
+  50% { content: "Experience" }
+  75% { content: "Track" }
+  100% { content: "Share" }
 }
