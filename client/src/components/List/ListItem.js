@@ -2,6 +2,7 @@ import React from "react";
 
 const ListItem = props => (
   <tr className="list-group-item">
+    <td></td>
     <td>{props.image}</td>
     <td>{props.title}</td>
     <td>{props.score}</td>

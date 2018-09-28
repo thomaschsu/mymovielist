@@ -8,9 +8,11 @@ const List = (props) => {
       <table>
 		  <thead>
 			<tr>
+				<th className="status"></th>
 				<th>Image</th>
 				<th>Movie Title</th>
 				<th>Score</th>
+				<th>Status</th>
 				<th>Director</th>
 			</tr>
 		  </thead>
