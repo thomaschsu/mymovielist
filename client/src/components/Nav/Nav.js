@@ -18,7 +18,7 @@ const Nav = () => (
 				>
 					<Link to="/" className="nav-link">
 						Home
-          </Link>
+          			</Link>
 				</li>
 				<li
 					className={
@@ -29,7 +29,7 @@ const Nav = () => (
 				>
 					<Link to="/movielist" className="nav-link">
 						Your List
-          </Link>
+          			</Link>
 				</li>
 				<li
 					className={
@@ -39,8 +39,8 @@ const Nav = () => (
 					}
 				>
 					<Link to="/search" className="nav-link">
-						Search
-          </Link>
+						<i className="material-icons nav-search">search</i>
+         			</Link>
 				</li>
 				<a className="waves-effect waves-light btn modal-trigger" href="#modal1">Signin</a>
 

@@ -27,3 +27,7 @@ nav ul a.btn {
   border-radius: 5px;
   text-shadow: 1px 1px #000;
 }
+
+.nav-search {
+	line-height: 1 !important;
+}
