@@ -6,29 +6,7 @@ import SideNav from "../components/SideNav";
 
 class MovieList extends Component {
   state = {
-    movies: [
-      {
-        image: "sample image",
-        status: "completed",
-        title: "sample title",
-        score: "10",
-        director: "sample director",
-      },
-      {
-        image: "different image",
-        status: "dropped",
-        title: "different title",
-        score: "4",
-        director: "different director",
-      },
-      {
-        image: "one more image",
-        status: "ptw",
-        title: "one more title",
-        score: "-",
-        director: "one more director",
-      }
-    ]
+    movies: []
   };
 
   getMovies = cb => {
