@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import MovieNav from "../components/MovieNav";
 import Jumbotron from "../components/Jumbotron";
 import List from "../components/List";
+import SideNav from "../components/SideNav";
 
 class MovieList extends Component {
   state = {
@@ -120,6 +121,7 @@ class MovieList extends Component {
   render() {
     return (
       <div>
+                <SideNav />
         <Jumbotron>
           <h1 className="jumbo-small">Organize, Discuss, Discover</h1>
           <h1 className="jumbo-title">MyMovieList</h1>

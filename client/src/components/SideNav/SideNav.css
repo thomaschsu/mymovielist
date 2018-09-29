@@ -1,0 +1,29 @@
+.SideNav {
+    border: 0.2px solid rgba(71, 71, 71, 0.929);
+    float: left;
+    height: 260px;
+    width: 45px;
+    position: fixed;
+    margin-left: -227px;
+    padding: 5px;
+    top: 300px;
+    background-color: rgba(60, 60, 60, 0.607);
+}
+
+.small{
+    top: 15px;
+    text-align: center;
+    color: rgb(52, 109, 207);
+    height: 50px;
+   position: relative;
+    left: 2px;
+    margin:0 0 12px 0; 
+
+}
+
+#exit{
+    transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+}
