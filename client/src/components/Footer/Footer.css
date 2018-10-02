@@ -1,12 +1,17 @@
 .page-footer{
+    top:500px;
     background-color:rgb(52, 109, 207);
     position: relative;
     bottom: 0;
     width: 100%;
 }
+#siteInfo{
+    padding-left:200px;
+}
 
 
 #col3{
+    background-color: #222;
 }
 #col2{
    
@@ -14,6 +19,7 @@
 }
 
 #icons{
+    padding-left:180px;
     margin-right:150px;
 }
 .nav-item{
@@ -29,4 +35,10 @@ h5{
 p{
     margin-right: 50px;
 }
-
+.container{
+    width: 100% !important;
+    
+    max-width: none;
+    padding: 0;
+    
+}

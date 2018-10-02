@@ -2,10 +2,11 @@ import React from "react"
 import "./SearchResult.css"
 
 const SearchResult = props => (
-	<div>
+	<div className="movSearch">
 		<img src={props.image === "N/A" || !props.image ? "/nopicture.png" : props.image}></img>
-		<p>{props.title}</p>
-		<p>{props.year}</p>
+		<br />
+		<span>{props.title}</span>
+		<span>{props.year}</span>
 	</div>
 );
 
