@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import './Footer.css';
 
 const Footer = () => (
@@ -13,9 +14,15 @@ const Footer = () => (
                 
                <div id="footLinks">
                 <ul>
-                  <li><a className="grey-text text-lighten-3" href="#!">Home</a></li>
-                  <li><a className="grey-text text-lighten-3" href="#!">Your List</a></li>
-                  <li><a className="grey-text text-lighten-3" href="#!">Search</a></li>
+                  <li><Link to="/" className="nav-link">
+						Home
+          			</Link></li>
+                  <li><Link to="/movielist" className="nav-link">
+						Your List
+          			</Link></li>
+                  <li><Link to="/search" className="nav-link">
+						Search
+         			</Link></li>
                   <li><a className="grey-text text-lighten-3" href="#!">Sign Up</a></li>
                 </ul>
               </div>
@@ -25,11 +32,11 @@ const Footer = () => (
               <div className="col l4 offset-l2 s12" id="col2">
                 <h5 className="text">Contributers</h5>
                 <ul>
-                  <li><a className="grey-text text-lighten-3" href="#!">Thomas Hsu</a></li>
-                  <li><a className="grey-text text-lighten-3" href="#!">Mark Albright</a></li>
-                  <li><a className="grey-text text-lighten-3" href="#!">Daniel Kissiday</a></li>
-                  <li><a className="grey-text text-lighten-3" href="#!">Andrew Murphy</a></li>
-                  <li><a className="grey-text text-lighten-3" href="#!">Robert Robinson</a></li>
+                  <li><a className="grey-text text-lighten-3" href="https://github.com/thomaschsu">Thomas Hsu</a></li>
+                  <li><a className="grey-text text-lighten-3" href="https://github.com/malbright218">Mark Albright</a></li>
+                  <li><a className="grey-text text-lighten-3" href="https://github.com/dank1302">Daniel Kissiday</a></li>
+                  <li><a className="grey-text text-lighten-3" href="https://github.com/a-murph">Andrew Murphy</a></li>
+                  <li><a className="grey-text text-lighten-3" href="https://github.com/Rjr211">Robert Robinson</a></li>
                 </ul>
                
               </div>

@@ -22,8 +22,6 @@
 h5{
     font-weight: bold;
     color:rgba(60, 60, 60, 0.607);
-    border-bottom: black;
-    border-width: 10px;
 }
 #nameRight{
     float:right;
