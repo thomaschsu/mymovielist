@@ -51,3 +51,11 @@ tr {
 .table-right {
   width: 50%;
 }
+
+.delay {
+    animation-delay: 1s;
+}
+
+.delay-2 {
+    animation-delay: 2s;
+}
