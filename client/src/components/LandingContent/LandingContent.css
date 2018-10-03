@@ -1,0 +1,53 @@
+.landingcontent {
+  position: relative;
+  top: 500px;
+  background-color: #222;
+  color: #FFF;
+}
+
+.table-format-left {
+  padding: 0 0 50px 200px;
+  width: 50%;
+}
+
+.table-heading {
+  color: #FFF;
+}
+
+tr {
+  border-bottom: none;
+}
+
+.img-poster {
+  width: 50%;
+}
+
+.img-poster:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+  box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+  -webkit-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+}
+
+.card-panel {
+  margin-top: 60px;
+}
+
+.card-panel:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+  box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+  -webkit-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+}
+
+.table-right {
+  width: 50%;
+}

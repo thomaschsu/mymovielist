@@ -31,3 +31,7 @@ nav ul a.btn {
 .nav-search {
 	line-height: 1 !important;
 }
+
+.nav i {
+  height: auto !important;
+}
