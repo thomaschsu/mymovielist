@@ -1,3 +1,9 @@
-.movSearch{
-    float:left;
+.input-text {
+    color: #FFF;
+}
+.search-button {
+    background-color: transparent !important;
+    border: .5px solid #FFF;
+    border-radius: 5px;
+    text-shadow: 1px 1px #000;
 }

@@ -1,10 +1,9 @@
 .SideNav {
     border: 0.2px solid rgba(71, 71, 71, 0.929);
     float: left;
-    height: 260px;
+    height: 200px;
     width: 45px;
     position: fixed;
-    margin-left: -227px;
     padding: 5px;
     top: 300px;
     background-color: rgba(60, 60, 60, 0.607);

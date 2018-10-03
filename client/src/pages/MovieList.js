@@ -4,6 +4,8 @@ import Jumbotron from "../components/Jumbotron";
 import List from "../components/List";
 import SideNav from "../components/SideNav";
 import API from "../utils/API"
+import "../components/MovieList/MovieList.css";
+import Wrapper from "../components/Wrapper";
 
 class MovieList extends Component {
 	state = {
@@ -82,14 +84,16 @@ class MovieList extends Component {
 	render() {
 		return (
 			<div>
+				<Wrapper>
+					<Jumbotron>
+						<h1 className="jumbo-small">Organize, Discuss, Discover</h1>
+						<h1 className="jumbo-title">MyMovieList</h1>
+						<h1 className="jumbo-small">HOW MANY MOVIES HAVE YOU SEEN?</h1>
+					</Jumbotron>
+					<MovieNav function={this.handleStatusChange}></MovieNav>
+					<List movies={this.state.movies} />
+				</Wrapper>
 				<SideNav />
-				<Jumbotron>
-					<h1 className="jumbo-small">Organize, Discuss, Discover</h1>
-					<h1 className="jumbo-title">MyMovieList</h1>
-					<h1 className="jumbo-small">HOW MANY MOVIES HAVE YOU SEEN?</h1>
-				</Jumbotron>
-				<MovieNav function={this.handleStatusChange}></MovieNav>
-				<List movies={this.state.movies} />
 			</div>
 		);
 	}
