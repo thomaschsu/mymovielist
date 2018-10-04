@@ -226,7 +226,7 @@ export default class Nav extends React.Component {
 
   render() {
     return (
-      <nav className="bg-primary nav">
+      <nav className="bg-primary nav animated fadeIn delay-2s">
         <span className="navbar-brand" to="/">
           My<span className="nav-blue">Movie</span>List
     </span>
@@ -279,8 +279,8 @@ export default class Nav extends React.Component {
           contentLabel="Log In Modal"
         >
           <div className="modal-header">
-            <button type="button" className="close" onClick={this.closeModal1}>X</button>
-            <h3 className="modal-title">Login</h3>
+            <button type="button" className="close btn-floating btn-small waves-effect waves-light red animated tada delay-2s" onClick={this.closeModal1}>x</button>
+            <h3 className="modal-title animated fadeInDownBig">Login</h3>
           </div>
 
           <div className="modal-body">
@@ -311,10 +311,10 @@ export default class Nav extends React.Component {
 
               <hr></hr>
               <button
-                className="btn btn-primary btn-block"
+                className="btn waves-effect waves-light blue pulse"
                 type="submit"
                 onClick={this.handleLoginSubmit}>
-                Sign In</button>
+                Sign In <i class="material-icons right">send</i></button>
             </form>
           </div>
         </Modal>
@@ -332,8 +332,8 @@ export default class Nav extends React.Component {
           contentLabel="Sign Up Modal"
         >
           <div className="modal-header">
-            <button type="button" className="close" onClick={this.closeModal2}>X</button>
-            <h3 className="modal-title">Sign Up</h3>
+            <button type="button" className="close btn-floating btn-small waves-effect waves-light red animated tada delay-2s" onClick={this.closeModal2}>x</button>
+            <h3 className="modal-title animated fadeInDownBig">Sign Up</h3>
           </div>
 
           <div className="modal-body">
@@ -393,10 +393,10 @@ export default class Nav extends React.Component {
               </div>
               <hr></hr>
               <button
-                className="btn btn-primary btn-block"
+                className="btn waves-effect waves-light blue pulse"
                 type="submit"
                 onClick={this.handleSignupSubmit}>
-                Sign Up</button>
+                Sign Up <i class="material-icons right">send</i></button>
             </form>
           </div>
         </Modal>

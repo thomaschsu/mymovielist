@@ -3,10 +3,10 @@
 }
 
 .list-overflow-container {
-  border: 1px #DDDDDD solid;
   overflow-x: hidden;
   margin-bottom: 500px;
   color: #DDD;
+  border-radius: 5px;
 }
 
 .list-overflow-container ul {

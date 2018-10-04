@@ -8,6 +8,7 @@
 .table-format-left {
   padding: 0 0 50px 200px;
   width: 50%;
+  text-shadow: 1px 1px #000;
 }
 
 .table-heading {
@@ -35,6 +36,7 @@ tr {
 
 .card-panel {
   margin-top: 60px;
+  text-shadow: 1px 1px #000;
 }
 
 .card-panel:hover {
