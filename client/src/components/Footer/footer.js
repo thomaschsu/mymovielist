@@ -47,25 +47,25 @@ const Footer = () => (
       </div>
       <div className="footer-copyright" id="col3">
 
-        <ul class="nav nav-bar" id="icons">
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.facebook.com/">
-              <i class="fab fa-facebook-square fa-2x"></i>
+        <ul className="nav nav-bar" id="icons">
+          <li className="nav-item">
+            <a className="nav-link" href="https://www.facebook.com/">
+              <i className="fab fa-facebook-square fa-2x"></i>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/">
-              <i class="fab fa-twitter-square fa-2x"></i>
+          <li className="nav-item">
+            <a className="nav-link" href="https://twitter.com/">
+              <i className="fab fa-twitter-square fa-2x"></i>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.instagram.com/">
-              <i class="fab fa-instagram fa-2x"></i>
+          <li className="nav-item">
+            <a className="nav-link" href="https://www.instagram.com/">
+              <i className="fab fa-instagram fa-2x"></i>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.youtube.com/">
-              <i class="fab fa-youtube fa-2x"></i>
+          <li className="nav-item">
+            <a className="nav-link" href="https://www.youtube.com/">
+              <i className="fab fa-youtube fa-2x"></i>
             </a>
           </li>
         </ul>
