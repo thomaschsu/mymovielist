@@ -20,7 +20,7 @@ const LandingContent = () => (
                 </div></td>
             </tr>
             <tr>
-                <td className="table-format-left fadeInDownBig animated delay"><img src="poster.jpg" className="img-poster"></img></td>
+                <td className="table-format-left fadeInLeftBig animated delay"><img src="poster.jpg" className="img-poster"></img></td>
                 <td className="table-right bounceInRight animated delay"><h5 className="table-heading yellow-text"><i class="fas fa-star-half"></i> Score Your Movies</h5><br></br>Score the movies on your list from 0-10. Did you like the movie? Score a 10. Hate the movie? Score a 0.</td>
             </tr>
             <tr>

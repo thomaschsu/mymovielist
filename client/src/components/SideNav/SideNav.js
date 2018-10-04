@@ -2,7 +2,7 @@ import React from "react";
 import "./SideNav.css";
 
 const SideNav = () => (
-  <div className="SideNav">
+  <div className="SideNav animated fadeInLeftBig delay-1s">
   <ul>
 
  <li>
