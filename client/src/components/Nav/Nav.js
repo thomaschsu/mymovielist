@@ -280,7 +280,7 @@ export default class Nav extends React.Component {
         >
           <div className="modal-header">
             <button type="button" className="close btn-floating btn-small waves-effect waves-light red animated tada delay-2s" onClick={this.closeModal1}>x</button>
-            <h3 className="modal-title animated fadeInDownBig">Login</h3>
+            <h3 className="modal-title">Login</h3>
           </div>
 
           <div className="modal-body">
@@ -333,7 +333,7 @@ export default class Nav extends React.Component {
         >
           <div className="modal-header">
             <button type="button" className="close btn-floating btn-small waves-effect waves-light red animated tada delay-2s" onClick={this.closeModal2}>x</button>
-            <h3 className="modal-title animated fadeInDownBig">Sign Up</h3>
+            <h3 className="modal-title">Sign Up</h3>
           </div>
 
           <div className="modal-body">
