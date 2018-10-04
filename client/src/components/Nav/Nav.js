@@ -311,7 +311,7 @@ export default class Nav extends React.Component {
 
               <hr></hr>
               <button
-                className="btn waves-effect waves-light blue pulse"
+                className="btn waves-effect waves-light blue"
                 type="submit"
                 onClick={this.handleLoginSubmit}>
                 Sign In <i class="material-icons right">send</i></button>
@@ -393,7 +393,7 @@ export default class Nav extends React.Component {
               </div>
               <hr></hr>
               <button
-                className="btn waves-effect waves-light blue pulse"
+                className="btn waves-effect waves-light blue"
                 type="submit"
                 onClick={this.handleSignupSubmit}>
                 Sign Up <i class="material-icons right">send</i></button>
