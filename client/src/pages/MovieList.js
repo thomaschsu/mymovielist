@@ -14,7 +14,7 @@ class MovieList extends Component {
 	};
 
 	getMovies = cb => {
-		API.getMovies()
+		API.getMovies(sessionStorage.getItem("username").slice(1, -1))
 			.then(res => this.setState({ allMovies: res.data[0].movieArr }, cb))
 			.catch(err => console.log(err));
 	}
