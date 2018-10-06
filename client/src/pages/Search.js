@@ -20,9 +20,11 @@ class Search extends Component {
 		event.preventDefault();
 
 		API.search(this.state.search).then(res => {
-			this.setState({
-				results: res.data.Search
-			}, () => {console.log(this.state.results)});
+			if (res.data.Search) {
+				this.setState({
+					results: res.data.Search
+				}, () => {console.log(this.state.results)});
+			}
 		});
 	};
 
