@@ -44,3 +44,8 @@
 .table-head {
   background-color: #263238;
 }
+
+select {
+  display: inline-block;
+  color: #222;
+}
