@@ -111,7 +111,7 @@ class MovieList extends Component {
 						<h1 className="jumbo-small">HOW MANY MOVIES HAVE YOU SEEN?</h1>
 					</Jumbotron>
 					<MovieNav function={this.handleStatusChange}></MovieNav>
-					<List remove={this.handleRemove} dropdown={this.handleDropdowns} movies={this.state.movies} />
+					<List delete={this.handleRemove} dropdown={this.handleDropdowns} movies={this.state.movies} />
 				</Wrapper>
 				<SideNav />
 			</div>
