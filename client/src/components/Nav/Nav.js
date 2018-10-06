@@ -47,6 +47,7 @@ export default class Nav extends React.Component {
       hideLogout: sessionStorage.getItem("logout"),
       hideLogin: sessionStorage.getItem("signin"),
       hideSignup: sessionStorage.getItem("signup"),
+      hidelist: sessionStorage.getItem("list"),
 
       loginError: false,
       logIn: false
@@ -69,7 +70,9 @@ export default class Nav extends React.Component {
 
   }
 
-  // componentDidMount() {
+  componentDidMount() {
+    sessionStorage.setItem("list", "hidden");
+  }
 
   //   //--Optional, this checks to see if a user is logged in and if so...
   //   //--it's set to show their name and hide the login and signup buttons.
@@ -133,6 +136,7 @@ export default class Nav extends React.Component {
         sessionStorage.setItem("logout", "")
         sessionStorage.setItem("signin", "hidden")
         sessionStorage.setItem("signup", "hidden")
+        sessionStorage.setItem("list", "")
         this.setState({
           // modal1IsOpen: false,
           // hideLogout: "",
@@ -153,6 +157,7 @@ export default class Nav extends React.Component {
     sessionStorage.setItem("logout", "hidden")
     sessionStorage.setItem("signin", "")
     sessionStorage.setItem("signup", "")
+    sessionStorage.setItem("list", "hidden")
 
   }
 
@@ -266,7 +271,7 @@ console.log('this runs')
               }
             >
               <Link to="/movielist" className="nav-link">
-                Your List
+                <a className={this.state.hidelist}>Your List</a>
           			</Link>
             </li>
             <li
