@@ -75,4 +75,13 @@ tr {
     overflow: visible;
     text-align: center;
     width: 500px;
+    margin: 0 auto;
+  }
+
+  .center-fix {
+    width: 100%;
+  }
+
+  .row-fix {
+    margin-bottom: 90px;
   }
