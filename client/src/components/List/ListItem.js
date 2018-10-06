@@ -6,7 +6,7 @@ const ListItem = props => (
     <td><img src={props.image === "N/A" || !props.image ? "/nopicture.png" : props.image} alt="displays site name"></img></td>
     <td>{props.title}</td>
     <td>
-      <select data-ddType="score" onChange={props.dropdown}>
+      <select data-title={props.title} data-ddType="score" onChange={props.dropdown}>
         <option value="10" selected={props.score === "10"}>10</option>
         <option value="9" selected={props.score === "9"}>9</option>
         <option value="8" selected={props.score === "8"}>8</option>
@@ -19,7 +19,7 @@ const ListItem = props => (
         <option value="1" selected={props.score === "1"}>1</option>
         <option value="-" selected={props.score === "-"}>-</option>
       </select></td>
-    <td><select data-ddType="status" onChange={props.dropdown}>
+    <td><select data-title={props.title} data-ddType="status" onChange={props.dropdown}>
         <option value="completed" selected={props.status === "completed"}>Completed</option>
         <option value="dropped" selected={props.status === "dropped"}>Dropped</option>
         <option value="ptw" selected={props.status === "ptw"}>Plan to Watch</option>
