@@ -24,9 +24,6 @@ const Footer = () => (
               <li><Link to="/search" className="nav-link">
                 Search
          			</Link></li>
-               {/* Open modal from Nav */}
-              <li><a id="signInButton" onClick={Nav.openModal1} >Sign In</a></li>
-              <li><a id="signupButton" onClick={Nav.openModal2} >Sign Up</a></li>
             </ul>
           </div>
 
