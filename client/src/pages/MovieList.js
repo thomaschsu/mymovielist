@@ -75,7 +75,7 @@ class MovieList extends Component {
 				});
 				break;
 
-			case "Default":
+			default:
 				console.log("all route");
 				this.resetMovies(() => { });
 				break;
