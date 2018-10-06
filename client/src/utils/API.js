@@ -12,5 +12,8 @@ export default {
 	},
 	addMovie: function(user, movie) {
 		return axios.post(`/api/movies/${user}`, movie);
+	},
+	updateMovie: function(user, property, value) {
+		return axios.put(`/api/movies/${user}`, {property: property, value: value});
 	}
 }
