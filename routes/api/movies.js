@@ -3,6 +3,7 @@ const moviesController = require("../../controllers/moviesController");
 
 router.route("/:user")
   .get(moviesController.findAll)
-  .post(moviesController.addMovie);
+  .post(moviesController.addMovie)
+  .put(moviesController.updateMovie);
 
 module.exports = router;
