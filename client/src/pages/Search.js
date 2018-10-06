@@ -24,7 +24,11 @@ class Search extends Component {
 				results: res.data.Search
 			}, () => {console.log(this.state.results)});
 		});
-	}
+	};
+
+	handleAddToList = event => {
+
+	};
 
 	render() {
 		return (
@@ -32,7 +36,7 @@ class Search extends Component {
 				<Wrapper>
 					<SearchBar changefunc={this.handleInputChange} submitfunc={this.handleFormSubmit} />
 					<div>
-						{this.state.results.map(element => <SearchResult title={element.Title} image={element.Poster} year={element.Year} />)}
+						{this.state.results.map(element => <SearchResult title={element.Title} image={element.Poster} year={element.Year} key={element.imdbID} id={element.imdbID} />)}
 					</div>
 				</Wrapper>
 			</div>
