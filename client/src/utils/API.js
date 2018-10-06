@@ -13,7 +13,7 @@ export default {
 	addMovie: function(user, movie) {
 		return axios.post(`/api/movies/${user}`, movie);
 	},
-	updateMovie: function(user, type, value) {
-		return axios.put(`/api/movies/${user}`, {type: type, value: value});
+	updateMovie: function(user, movie, type, value) {
+		return axios.put(`/api/movies/${user}`, {movie: movie, type: type, value: value});
 	}
 }

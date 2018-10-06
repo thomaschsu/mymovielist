@@ -87,6 +87,7 @@ class MovieList extends Component {
 
 		API.updateMovie(
 			sessionStorage.getItem("username").slice(1, -1),
+			event.target.dataset.title,
 			event.target.dataset.ddtype,
 			newVal);
 	};
