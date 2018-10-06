@@ -18,7 +18,7 @@ const List = (props) => {
 		  </thead>
 		  <tbody>
 			  {props.movies.map(movie => (
-				  <ListItem image={movie.image} title={movie.title} score={movie.score} status={movie.status} director={movie.director} />
+				  <ListItem dropdown={props.dropdown} image={movie.image} title={movie.title} score={movie.score} status={movie.status} director={movie.director} />
 			  ))}
 		  </tbody>
 	  </table>

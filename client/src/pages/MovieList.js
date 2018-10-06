@@ -82,6 +82,10 @@ class MovieList extends Component {
 		}
 	};
 
+	handleDropdowns = event => {
+		console.log("in handleDropdowns");
+	};
+
 	componentDidMount = () => {
 		this.getMovies(this.resetMovies);
 	};
@@ -96,7 +100,7 @@ class MovieList extends Component {
 						<h1 className="jumbo-small">HOW MANY MOVIES HAVE YOU SEEN?</h1>
 					</Jumbotron>
 					<MovieNav function={this.handleStatusChange}></MovieNav>
-					<List movies={this.state.movies} />
+					<List dropdown={this.handleDropdowns} movies={this.state.movies} />
 				</Wrapper>
 				<SideNav />
 			</div>
