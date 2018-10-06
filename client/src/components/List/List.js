@@ -14,6 +14,7 @@ const List = (props) => {
 				<th>Score</th>
 				<th>Status</th>
 				<th>Director</th>
+				<th className="delete"></th>
 			</tr>
 		  </thead>
 		  <tbody>
