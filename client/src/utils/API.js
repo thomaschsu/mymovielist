@@ -17,6 +17,6 @@ export default {
 		return axios.put(`/api/movies/${user}`, {movie: movie, type: type, value: value});
 	},
 	removeMovie: function(user, movie) {
-		return axios.delete(`/api/movies/${user}`, movie);
+		return axios.put(`/api/movies/${user}`, {movie: movie, type: "remove"});
 	}
 }
