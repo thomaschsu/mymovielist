@@ -83,7 +83,12 @@ class MovieList extends Component {
 	};
 
 	handleDropdowns = event => {
-		console.log("in handleDropdowns");
+		const newVal = event.target.value;
+
+		API.updateMovie(
+			sessionStorage.getItem("username").slice(1, -1),
+			event.target.dataset.ddType,
+			newVal);
 	};
 
 	componentDidMount = () => {
