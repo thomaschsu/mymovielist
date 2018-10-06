@@ -41,5 +41,14 @@
 			var elems = document.querySelectorAll('.modal');
 			var instances = M.Modal.init(elems);
 		});
+		$(document).ready(function(){
+  $('.carousel').carousel();
+  autoplay() 
+  function autoplay() { 
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 4500);           
+  }
+});
+
 	</script>
 </html>

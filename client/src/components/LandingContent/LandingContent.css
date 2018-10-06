@@ -61,3 +61,18 @@ tr {
 .delay-2 {
     animation-delay: 2s;
 }
+.carousel-item{
+  height: 275px !important;
+  width: 275px !important;
+  z-index: 999;
+  
+  
+  }
+  
+  .carousel{
+    display: flex;
+    position: relative;
+    overflow: visible;
+    text-align: center;
+    width: 500px;
+  }

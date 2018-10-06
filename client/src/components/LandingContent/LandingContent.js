@@ -4,6 +4,43 @@ import "./LandingContent.css";
 const LandingContent = () => (
     <div className="landingcontent"><table>
         <tbody>
+        <tr>
+                <td className="">
+                    <div className="row">
+                    <div className="col s12 m12">
+                    <h4><i class="material-icons">local_movies</i> Whats Trending? </h4>
+<p>Take a look at new and popular movies being watched among the MyMovieList community</p>
+                        <ul className="carousel">
+
+                            <li className="carousel-item">
+                                <img src="venom.jpg"   />
+                            </li>
+
+                            <li className="carousel-item">
+                                <img src="firstMan.jpg"  />
+                            </li>
+
+                            <li className="carousel-item">
+                                <img src="halloween.jpg"  />
+                            </li>
+
+                            <li className="carousel-item">
+                                <img src="nun.jpg" />
+                            </li>
+
+                            <li className="carousel-item">
+                                <img src="nightSchool.jpg" />
+                            </li>
+
+                            <li className="carousel-item">
+                                <img src="wbr.jpg"  />
+                            </li>
+
+                        </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr>
             <tr>
                 <td className="table-format-left animated bounceInDown delay-2s"><h5 className="table-heading red-text"><i className="fas fa-user-friends"></i> Share with your friends.</h5><br></br><span>With a thriving community, chat with others and compare lists with friends!</span></td>
                 <td><div className="row">
