@@ -40,5 +40,16 @@ module.exports = {
 				})
 				.catch(err => res.status(422).json(err));
 		}
+	},
+	removeMovie: function (req, res) {
+		db.User
+			.updateOne(
+				{ username: req.params.user },
+				{ $pull: { "moiveArr.title": req.body } }
+			).then(dbModel => {
+				console.log(dbModel);
+				res.json(dbModel)
+			})
+			.catch(err => res.status(422).json(err));
 	}
 };
