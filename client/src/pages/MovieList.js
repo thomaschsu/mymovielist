@@ -74,6 +74,11 @@ class MovieList extends Component {
 					});
 				});
 				break;
+
+			case "Default":
+				console.log("all route");
+				this.resetMovies(() => { });
+				break;
 		}
 	};
 
