@@ -7,7 +7,7 @@ const SideNav = () => (
 
  <li>
   <a className="small material-icons modal-trigger" href="#modal2" id="add">playlist_add</a> 
-  <div id="modal2" class="modal modal-fixed-footer">
+  <div id="modal2" className="modal modal-fixed-footer">
     <div className="modal-content">
       <h4>Modal Header</h4>
       <p>A bunch of text</p>
