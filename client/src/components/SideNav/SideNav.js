@@ -7,13 +7,13 @@ const SideNav = () => (
 
  <li>
   <a className="small material-icons modal-trigger" href="#modal2" id="add">playlist_add</a> 
-  <div id="modal2" class="modal modal-fixed-footer">
-    <div class="modal-content">
+  <div id="modal2" className="modal modal-fixed-footer">
+    <div className="modal-content">
       <h4>Modal Header</h4>
       <p>A bunch of text</p>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    <div className="modal-footer">
+      <a href="#!" className="modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
   </div>  
 </li>
