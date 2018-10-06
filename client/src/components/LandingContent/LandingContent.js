@@ -25,10 +25,10 @@ const LandingContent = () => (
             </tr>
             <tr>
                 <td className="table-format-left bounceInLeft animated delay-2"><h5 className="table-heading green-text"><i class="far fa-lightbulb"></i> Never Forget</h5><br></br>Never forget the movies you watched or what scores you gave. Keep track of it all in one place.</td>
-                <td><div class="row">
-                    <div class="col s12 m5">
-                        <div class="card-panel deep-purple flipInY animated delay-2">
-                            <span class="white-text"><i class="fas fa-question"></i> What are you waiting for? Sign up today.
+                <td><div className="row">
+                    <div className="col s12 m5">
+                        <div className="card-panel deep-purple flipInY animated delay-2">
+                            <span className="white-text"><i className="fas fa-question"></i> What are you waiting for? Sign up today.
                             </span>
                         </div>
                     </div>
