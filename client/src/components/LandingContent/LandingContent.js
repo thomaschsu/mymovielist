@@ -9,7 +9,7 @@ const LandingContent = () => (
                     <td>
                         <div className="row row-fix">
                             <div className="col s12 m12">
-                                <h4 className="center-align animated fadeInUpBig"><i class="material-icons">local_movies</i> Whats Trending? </h4>
+                                <h4 className="center-align animated fadeInUpBig"><i className="material-icons">local_movies</i> Whats Trending? </h4>
                                 <p className="center-align animated fadeInUpBig">Take a look at new and popular movies being watched among the MyMovieList community</p>
                                 <ul className="carousel animated fadeInUpBig">
 
