@@ -87,7 +87,7 @@ class MovieList extends Component {
 			sessionStorage.getItem("username").slice(1, -1),
 			event.target.dataset.title,
 			event.target.dataset.ddtype,
-			event.target.value);
+			event.target.value).then(this.getMovies(() => {}));
 	};
 
 	handleRemove = event => {
