@@ -37,11 +37,11 @@ class SideNav extends Component {
         </li>
 
         <li>
-          <a className="small material-icons" href="#" id="chat" >chat</a>
+          <a className="small material-icons" href="##" id="chat" >chat</a>
         </li>
 
         <li>
-          <a className="small material-icons" href="#" id="exit" onClick={this.handleUserLogout}>exit_to_app </a>
+          <a className="small material-icons" href="##" id="exit" onClick={this.handleUserLogout}>exit_to_app </a>
         </li>
 
       </ul>
