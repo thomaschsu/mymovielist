@@ -67,11 +67,11 @@ class Search extends Component {
 			<div>
 				<Wrapper>
 					<SearchBar changefunc={this.handleInputChange} submitfunc={this.handleFormSubmit} />
+					{this.state.results.length > 0 && this.state.page > 1 ? <button onClick={this.handlePagination}>Previous Page</button> : ""}
+					{this.state.results.length > 0 && this.state.page < this.state.maxPage ? <button onClick={this.handlePagination}>Next Page</button> : ""}
 					<div>
 						{this.state.results.map(element => <SearchResult title={element.Title} image={element.Poster} year={element.Year} key={element.imdbID} imdb={element.imdbID} click={this.handleAddToList} />)}
 					</div>
-					{this.state.results.length > 0 && this.state.page > 1 ? <button onClick={this.handlePagination}>Previous Page</button> : ""}
-					{this.state.results.length > 0 && this.state.page < this.state.maxPage ? <button onClick={this.handlePagination}>Next Page</button> : ""}
 				</Wrapper>
 			</div>
 		);
