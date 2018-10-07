@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./SideNav.css";
-
+import SearchBar from "../SearchBar";
+import SearchResult from "../SearchResult";
 
 class SideNav extends Component {
 
@@ -25,12 +26,14 @@ class SideNav extends Component {
 
           <li>
             <a className="small material-icons modal-trigger" href="#modal2" id="add">playlist_add</a>
-            <div id="modal2" className="modal modal-fixed-footer">
-              <div className="modal-content">
+            <div id="modal2" class="modal bottom-sheet">
+              <div class="modal-content">
                 <h4>Quick Add Movie</h4>
-                <div class="md-form">
-                  <input class="form-control" type="text" placeholder="Please Enter a Movie Title" aria-label="Search"></input>
-                </div>
+                <SearchBar />
+                <SearchResult />
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
               </div>
             </div>
           </li>
