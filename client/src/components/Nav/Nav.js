@@ -316,6 +316,7 @@ console.log('this runs')
                   placeholder="Username"
                   value={this.state.usernameInput}
                   onChange={this.handleChange}
+                  autofocus="autofocus"
                   required></input>
               </div>
 
