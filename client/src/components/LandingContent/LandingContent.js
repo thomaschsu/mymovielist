@@ -9,32 +9,32 @@ const LandingContent = () => (
                     <td>
                         <div className="row row-fix">
                             <div className="col s12 m12">
-                                <h4 className="center-align animated fadeInUpBig"><i class="material-icons">local_movies</i> Whats Trending? </h4>
+                                <h4 className="center-align animated fadeInUpBig"><i className="material-icons">local_movies</i> Whats Trending? </h4>
                                 <p className="center-align animated fadeInUpBig">Take a look at new and popular movies being watched among the MyMovieList community</p>
                                 <ul className="carousel animated fadeInUpBig">
 
                                     <li className="carousel-item">
-                                        <img src="venom.jpg" />
+                                        <img alt="" src="venom.jpg" />
                                     </li>
 
                                     <li className="carousel-item">
-                                        <img src="firstMan.jpg" />
+                                        <img alt="" src="firstMan.jpg" />
                                     </li>
 
                                     <li className="carousel-item">
-                                        <img src="halloween.jpg" />
+                                        <img alt="" src="halloween.jpg" />
                                     </li>
 
                                     <li className="carousel-item">
-                                        <img src="nun.jpg" />
+                                        <img alt="" src="nun.jpg" />
                                     </li>
 
                                     <li className="carousel-item">
-                                        <img src="nightSchool.jpg" />
+                                        <img alt="" src="nightSchool.jpg" />
                                     </li>
 
                                     <li className="carousel-item">
-                                        <img src="wbr.jpg" />
+                                        <img alt="" src="wbr.jpg" />
                                     </li>
 
                                 </ul>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './Footer.css';
-import Nav from "../Nav"
 
 const Footer = () => (
   <footer className="page-footer">
