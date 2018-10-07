@@ -14,27 +14,27 @@ const LandingContent = () => (
                                 <ul className="carousel animated fadeInUpBig">
 
                                     <li className="carousel-item">
-                                        <img src="venom.jpg" />
+                                        <img alt="" src="venom.jpg" />
                                     </li>
 
                                     <li className="carousel-item">
-                                        <img src="firstMan.jpg" />
+                                        <img alt="" src="firstMan.jpg" />
                                     </li>
 
                                     <li className="carousel-item">
-                                        <img src="halloween.jpg" />
+                                        <img alt="" src="halloween.jpg" />
                                     </li>
 
                                     <li className="carousel-item">
-                                        <img src="nun.jpg" />
+                                        <img alt="" src="nun.jpg" />
                                     </li>
 
                                     <li className="carousel-item">
-                                        <img src="nightSchool.jpg" />
+                                        <img alt="" src="nightSchool.jpg" />
                                     </li>
 
                                     <li className="carousel-item">
-                                        <img src="wbr.jpg" />
+                                        <img alt="" src="wbr.jpg" />
                                     </li>
 
                                 </ul>
