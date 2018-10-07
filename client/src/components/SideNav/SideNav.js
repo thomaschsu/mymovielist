@@ -26,14 +26,14 @@ class SideNav extends Component {
 
           <li>
             <a className="small material-icons modal-trigger" href="#modal2" id="add">playlist_add</a>
-            <div id="modal2" class="modal bottom-sheet">
-              <div class="modal-content">
+            <div id="modal2" className="modal bottom-sheet">
+              <div className="modal-content">
                 <h4>Quick Add Movie</h4>
                 <SearchBar />
                 <SearchResult />
               </div>
-              <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+              <div className="modal-footer">
+                <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
               </div>
             </div>
           </li>
