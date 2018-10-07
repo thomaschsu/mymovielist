@@ -5,7 +5,7 @@ import "./MovieNav.css";
 const MovieNav = props => (
   <Router>
     <div className="movie-menu">
-			<Link className="menu-items link-effect" to="/movielist" onClick={props.function}>
+		<Link className="menu-items link-effect" to="/movielist" onClick={props.function}>
 			All Movies
 		</Link>
 			<Link className="menu-items link-effect" to="/movielist/completed" onClick={props.function}>
