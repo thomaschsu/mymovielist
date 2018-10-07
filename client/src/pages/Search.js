@@ -7,7 +7,9 @@ import Wrapper from "../components/Wrapper";
 class Search extends Component {
 	state = {
 		search: "",
-		results: []
+		results: [],
+		page: 1,
+		maxPage: 1
 	}
 
 	handleInputChange = event => {
@@ -18,15 +20,32 @@ class Search extends Component {
 
 	handleFormSubmit = event => {
 		event.preventDefault();
+		this.searchAPI();
+	};
 
-		API.search(this.state.search).then(res => {
+	searchAPI = () => {
+		API.search(this.state.search, this.state.page).then(res => {
 			if (res.data.Search) {
 				this.setState({
-					results: res.data.Search
-				}, () => {console.log(this.state.results)});
+					results: res.data.Search,
+					maxPage: Math.ceil(res.data.totalResults / 10)
+				});
 			}
 		});
-	};
+	}
+
+	handlePagination = event => {
+		if (event.target.textContent === "Previous Page") {
+			this.setState({
+				page: (this.state.page - 1)
+			}, this.searchAPI);
+		}
+		else if (event.target.textContent === "Next Page") {
+			this.setState({
+				page: (this.state.page + 1)
+			}, this.searchAPI);
+		}
+	}
 
 	handleAddToList = event => {
 		const movieId = event.target.dataset.imdb;
@@ -51,6 +70,8 @@ class Search extends Component {
 					<div>
 						{this.state.results.map(element => <SearchResult title={element.Title} image={element.Poster} year={element.Year} key={element.imdbID} imdb={element.imdbID} click={this.handleAddToList} />)}
 					</div>
+					{this.state.results.length > 0 && this.state.page > 1 ? <button onClick={this.handlePagination}>Previous Page</button> : ""}
+					{this.state.results.length > 0 && this.state.page < this.state.maxPage ? <button onClick={this.handlePagination}>Next Page</button> : ""}
 				</Wrapper>
 			</div>
 		);
