@@ -5,16 +5,16 @@ import "./MovieNav.css";
 const MovieNav = props => (
   <Router>
     <div className="movie-menu">
-			<Link className="menu-items link-effect" to="/all" onClick={props.function}>
+		<Link className="menu-items link-effect" to="/movielist" onClick={props.function}>
 			All Movies
 		</Link>
-			<Link className="menu-items link-effect" to="/completed" onClick={props.function}>
+			<Link className="menu-items link-effect" to="/movielist/completed" onClick={props.function}>
 			Completed
 		</Link>
-		<Link className="menu-items link-effect" to="/dropped" onClick={props.function}>
+		<Link className="menu-items link-effect" to="/movielist/dropped" onClick={props.function}>
 			Dropped
 		</Link>
-			<Link className="menu-items link-effect" to="/ptw" onClick={props.function}>
+			<Link className="menu-items link-effect" to="/movielist/ptw" onClick={props.function}>
 			Plan to Watch
 		</Link>
     </div>
