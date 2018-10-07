@@ -85,7 +85,7 @@ class MovieList extends Component {
 	handleDropdowns = event => {
 		API.updateMovie(
 			sessionStorage.getItem("username").slice(1, -1),
-			event.target.dataset.title,
+			event.target.dataset.imdb,
 			event.target.dataset.ddtype,
 			event.target.value
 		).then(this.getMovies(() => {}));
@@ -94,7 +94,7 @@ class MovieList extends Component {
 	handleRemove = event => {
 		API.removeMovie(
 			sessionStorage.getItem("username").slice(1, -1),
-			event.target.dataset.title
+			event.target.dataset.imdb
 		).then(this.getMovies(() => {}));
 	};
 
