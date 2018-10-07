@@ -15,7 +15,7 @@ class Search extends Component {
 	handleInputChange = event => {
 		this.setState({
 			search: event.target.value
-		}, () => {console.log(this.state.search)});
+		});
 	};
 
 	handleFormSubmit = event => {

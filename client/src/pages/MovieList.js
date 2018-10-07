@@ -29,13 +29,11 @@ class MovieList extends Component {
 		switch (event.target.textContent) {
 			//All Movies List
 			case "All Movies":
-				console.log("all route");
 				this.resetMovies(() => { });
 				break;
 
 			//Completed List
 			case "Completed":
-				console.log("completed route");
 				this.resetMovies(() => {
 					const completedMovies = this.state.movies.filter(movie => (
 						movie.status === "completed"
@@ -49,7 +47,6 @@ class MovieList extends Component {
 
 			//Dropped List
 			case "Dropped":
-				console.log("dropped route");
 				this.resetMovies(() => {
 					const droppedMovies = this.state.movies.filter(movie => (
 						movie.status === "dropped"
@@ -63,7 +60,6 @@ class MovieList extends Component {
 
 			//PTW List
 			case "Plan to Watch":
-				console.log("ptw route");
 				this.resetMovies(() => {
 					const ptwMovies = this.state.movies.filter(movie => (
 						movie.status === "ptw"
@@ -76,7 +72,6 @@ class MovieList extends Component {
 				break;
 
 			default:
-				console.log("all route");
 				this.resetMovies(() => { });
 				break;
 		}
