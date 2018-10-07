@@ -3,7 +3,7 @@ import React from "react";
 const ListItem = props => (
   <tr className="list-group-item">
     <td></td>
-    <td><img src={props.image === "N/A" || !props.image ? "/nopicture.png" : props.image} alt="displays site name"></img></td>
+    <td><img src={props.image === "N/A" || !props.image ? "/nopicture.png" : props.image} className="list-item-img" alt="movie-poster"></img></td>
     <td>{props.title}</td>
     <td>
       <select data-title={props.title} data-ddtype="score" onChange={props.dropdown}>
