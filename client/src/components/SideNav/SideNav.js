@@ -25,7 +25,7 @@ class SideNav extends Component {
         <ul>
 
           <li>
-            <a className="small material-icons modal-trigger" href="#modal2" id="add">playlist_add</a>
+            <a className="small material-icons modal-trigger tooltipped" href="#modal2" id="add" data-position="right" data-tooltip="Quick Add Movie">playlist_add</a>
             <div id="modal2" className="modal bottom-sheet">
               <div className="modal-content">
                 <h4>Quick Add Movie</h4>
@@ -39,11 +39,11 @@ class SideNav extends Component {
           </li>
 
           <li>
-            <a className="small material-icons" href="##" id="chat" >chat</a>
+            <a className="small material-icons tooltipped" href="##" id="chat" data-position="right" data-tooltip="Chat">chat</a>
           </li>
 
           <li>
-            <a className="small material-icons" href="##" id="exit" onClick={this.handleUserLogout}>exit_to_app </a>
+            <a className="small material-icons tooltipped" href="##" id="exit" onClick={this.handleUserLogout} data-position="right" data-tooltip="Log Out">exit_to_app </a>
           </li>
 
         </ul>
