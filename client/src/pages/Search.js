@@ -10,7 +10,7 @@ class Search extends Component {
 		results: [],
 		page: 1,
 		maxPage: 1
-	}
+	};
 
 	handleInputChange = event => {
 		this.setState({
@@ -32,7 +32,7 @@ class Search extends Component {
 				});
 			}
 		});
-	}
+	};
 
 	handlePagination = event => {
 		if (event.target.textContent === "Previous Page") {
@@ -45,7 +45,7 @@ class Search extends Component {
 				page: (this.state.page + 1)
 			}, this.searchAPI);
 		}
-	}
+	};
 
 	handleAddToList = event => {
 		const movieId = event.target.dataset.imdb;
