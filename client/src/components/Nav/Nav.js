@@ -301,7 +301,7 @@ console.log('this runs')
           contentLabel="Log In Modal"
         >
           <div className="modal-header">
-            <button type="button" className="close btn-floating btn-small waves-effect waves-light red animated tada delay-2s" onClick={this.closeModal1}>x</button>
+            <button type="button" className="close btn-floating btn-small waves-effect waves-light red animated tada delay-2s" onClick={this.closeModal1}><i class="material-icons right">close</i></button>
             <h3 className="modal-title">Login</h3>
           </div>
 
@@ -355,7 +355,7 @@ console.log('this runs')
           contentLabel="Sign Up Modal"
         >
           <div className="modal-header">
-            <button type="button" className="close btn-floating btn-small waves-effect waves-light red animated tada delay-2s" onClick={this.closeModal2}>x</button>
+            <button type="button" className="close btn-floating btn-small waves-effect waves-light red animated tada delay-2s" onClick={this.closeModal2}><i class="material-icons right">close</i></button>
             <h3 className="modal-title">Sign Up</h3>
           </div>
 
