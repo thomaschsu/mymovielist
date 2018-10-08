@@ -62,3 +62,7 @@ select {
 .list-group-item:nth-child(even) {
     background: #FFF;
 }
+
+td {
+    border-radius: 0 !important;
+}
