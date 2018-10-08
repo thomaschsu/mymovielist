@@ -35,12 +35,12 @@ class Search extends Component {
 	};
 
 	handlePagination = event => {
-		if (event.target.textContent === "Previous Page") {
+		if (event.target.textContent === "Previous") {
 			this.setState({
 				page: (this.state.page - 1)
 			}, this.searchAPI);
 		}
-		else if (event.target.textContent === "Next Page") {
+		else if (event.target.textContent === "Next") {
 			this.setState({
 				page: (this.state.page + 1)
 			}, this.searchAPI);
@@ -67,8 +67,8 @@ class Search extends Component {
 			<div>
 				<Wrapper>
 					<SearchBar changefunc={this.handleInputChange} submitfunc={this.handleFormSubmit} />
-					{this.state.results.length > 0 && this.state.page > 1 ? <button onClick={this.handlePagination}>Previous Page</button> : ""}
-					{this.state.results.length > 0 && this.state.page < this.state.maxPage ? <button onClick={this.handlePagination}>Next Page</button> : ""}
+					{this.state.results.length > 0 && this.state.page > 1 ? <button onClick={this.handlePagination} className="previous-page">Previous</button> : ""}
+					{this.state.results.length > 0 && this.state.page < this.state.maxPage ? <button onClick={this.handlePagination} className="next-page">Next</button> : ""}
 					<div>
 						{this.state.results.map(element => <SearchResult title={element.Title} image={element.Poster} year={element.Year} key={element.imdbID} imdb={element.imdbID} click={this.handleAddToList} />)}
 					</div>
