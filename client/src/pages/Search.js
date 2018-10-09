@@ -66,9 +66,9 @@ class Search extends Component {
 				director: res.data.Director
 			};
 			API.addMovie(sessionStorage.getItem("username").slice(1, -1), movie).then(() => {
-				event.target.textContent = "clear";
-				event.target.classList.toggle("red");
-				event.target.classList.toggle("green");
+				this.setState({
+					listIds: [...this.state.listIds, movieId]
+				});
 			});
 		});
 	};
@@ -77,9 +77,12 @@ class Search extends Component {
 		const movieId = event.target.dataset.imdb;
 
 		API.removeMovie(sessionStorage.getItem("username").slice(1, -1), movieId).then(() => {
-			event.target.textContent = "add";
-			event.target.classList.toggle("red");
-			event.target.classList.toggle("green");
+			let newList = this.state.listIds;
+			newList.splice(this.state.listIds.indexOf(movieId), 1);
+			console.log(newList)
+			this.setState({
+				listIds: newList
+			});
 		});
 	};
 
@@ -87,7 +90,7 @@ class Search extends Component {
 		API.getMovies(sessionStorage.getItem("username").slice(1, -1)).then(res => {
 			this.setState({
 				listIds: res.data[0].movieArr.map(movie => movie.imdbId)
-			});
+			}, () => {console.log(this.state.listIds)});
 		});
 	}
 
