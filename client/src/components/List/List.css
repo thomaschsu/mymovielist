@@ -1,51 +1,67 @@
 .container-fluid {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .list-overflow-container {
-  overflow-x: hidden;
-  margin-bottom: 500px;
-  color: #DDD;
-  border-radius: 5px;
+    overflow-x: hidden;
+    color: #DDD;
+    border-radius: 5px;
 }
 
 .list-overflow-container ul {
-  margin: 0;
+    margin: 0;
 }
 
 .list-overflow-container li {
-  border-radius: 0px;
-  border-left: none;
-  border-right: none;
+    border-radius: 0px;
+    border-left: none;
+    border-right: none;
 }
 
 .list-overflow-container li * {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .list-overflow-container li a {
-  color: #2A878C;
+    color: #2A878C;
 }
 
 .list-overflow-container li:first-child {
-  border-top: none;
+    border-top: none;
 }
 
 .list-overflow-container li:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .list-group-item {
-  display: table-row;
-  background-color: transparent;
-  border: none;
+    display: table-row;
+    background-color: transparent;
+    border: none;
+    color: #222;
 }
 
 .table-head {
-  background-color: #263238;
+    background-color: #263238;
 }
 
 select {
-  display: inline-block;
-  color: #222;
+    display: inline-block;
+    color: #222;
+}
+
+.list-item-img {
+    width: 30%;
+}
+
+.list-group-item:nth-child(odd) {
+    background: #EEE;
+}
+
+.list-group-item:nth-child(even) {
+    background: #FFF;
+}
+
+td {
+    border-radius: 0 !important;
 }

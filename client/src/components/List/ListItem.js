@@ -3,7 +3,7 @@ import React from "react";
 const ListItem = props => (
   <tr className="list-group-item">
     <td></td>
-    <td><img src={props.image === "N/A" || !props.image ? "/nopicture.png" : props.image} alt="displays site name"></img></td>
+    <td><img src={props.image === "N/A" || !props.image ? "/nopicture.png" : props.image} className="list-item-img" alt="movie-poster"></img></td>
     <td>{props.title}</td>
     <td>
       <select data-imdb={props.imdb} data-ddtype="score" onChange={props.dropdown}>
@@ -25,7 +25,7 @@ const ListItem = props => (
         <option value="ptw" selected={props.status === "ptw"}>Plan to Watch</option>
       </select></td>
     <td>{props.director}</td>
-    <td><a onClick={props.delete} class="btn-floating btn-small waves-effect waves-light red"><i data-imdb={props.imdb} class="material-icons">clear</i></a></td>
+    <td><a onClick={props.delete} className="btn-floating btn-small waves-effect waves-light red"><i data-imdb={props.imdb} className="material-icons">clear</i></a></td>
   </tr>
 );
 
