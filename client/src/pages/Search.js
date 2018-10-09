@@ -9,7 +9,8 @@ class Search extends Component {
 		search: "",
 		results: [],
 		page: 1,
-		maxPage: 1
+		maxPage: 1,
+		listIds: []
 	};
 
 	handleInputChange = event => {
@@ -67,6 +68,7 @@ class Search extends Component {
 			API.addMovie(sessionStorage.getItem("username").slice(1, -1), movie).then(() => {
 				event.target.textContent = "clear";
 				event.target.classList.toggle("red");
+				event.target.classList.toggle("green");
 			});
 		});
 	};
@@ -77,8 +79,17 @@ class Search extends Component {
 		API.removeMovie(sessionStorage.getItem("username").slice(1, -1), movieId).then(() => {
 			event.target.textContent = "add";
 			event.target.classList.toggle("red");
+			event.target.classList.toggle("green");
 		});
 	};
+
+	componentDidMount() {
+		API.getMovies(sessionStorage.getItem("username").slice(1, -1)).then(res => {
+			this.setState({
+				listIds: res.data[0].movieArr.map(movie => movie.imdbId)
+			});
+		});
+	}
 
 	render() {
 		return (
@@ -88,7 +99,7 @@ class Search extends Component {
 					{this.state.results.length > 0 && this.state.page > 1 ? <button onClick={this.handlePagination} className="previous-page">Previous</button> : ""}
 					{this.state.results.length > 0 && this.state.page < this.state.maxPage ? <button onClick={this.handlePagination} className="next-page">Next</button> : ""}
 					<div>
-						{this.state.results.map(element => <SearchResult title={element.Title} image={element.Poster} year={element.Year} key={element.imdbID} imdb={element.imdbID} click={this.handleAddToList} />)}
+						{this.state.results.map(element => <SearchResult title={element.Title} image={element.Poster} year={element.Year} key={element.imdbID} imdb={element.imdbID} click={this.handleAddToList} added={this.state.listIds.includes(element.imdbID)} />)}
 					</div>
 				</Wrapper>
 			</div>
