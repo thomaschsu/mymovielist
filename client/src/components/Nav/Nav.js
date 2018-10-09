@@ -47,7 +47,6 @@ export default class Nav extends React.Component {
       hideLogout: sessionStorage.getItem("logout"),
       hideLogin: sessionStorage.getItem("signin"),
       hideSignup: sessionStorage.getItem("signup"),
-      hidelist: sessionStorage.getItem("list"),
 
       loginError: false,
       logIn: false
@@ -65,19 +64,21 @@ export default class Nav extends React.Component {
     this.handleSignupSubmit = this.handleSignupSubmit.bind(this);
     this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
 
-    //this._logout = this._logout.bind(this);
-    //this._login = this._login.bind(this);
-
   }
 
   componentDidMount() {
-    sessionStorage.setItem("list", "hidden");
+    console.log(sessionStorage.length);
+    if (sessionStorage.length === 0) {
+      this.setState({
+        loginError: false
+      })
+    } else {
+      this.setState({
+        loginError: true
+      })
+    }
+
   }
-
-  //   //--Optional, this checks to see if a user is logged in and if so...
-  //   //--it's set to show their name and hide the login and signup buttons.
-
-  // }
 
 
   handleChange(event) {
@@ -130,20 +131,31 @@ export default class Nav extends React.Component {
       let passwordIndex = d.indexOf(a) + 8
       let pwd = d[passwordIndex];
 
+      if (response.status = 200) {
+        this.setState({
+          loginError: true
+        })
+      } else {
+        this.setState({
+          loginError: false
+        })
+      }
+
+
       if ((jQuery.inArray(a, d) !== -1) && pwd === b) {
         console.log("YES")
         sessionStorage.setItem("username", JSON.stringify(a))
         sessionStorage.setItem("logout", "")
         sessionStorage.setItem("signin", "hidden")
         sessionStorage.setItem("signup", "hidden")
-        sessionStorage.setItem("list", "")
+        
         this.setState({
-          // modal1IsOpen: false,
-          // hideLogout: "",
-          // hideLogin: "hidden",
-          // hideSignup: "hidden"
           logIn: true
+          
         })
+
+
+
         window.location.replace("http://localhost:3000/movielist")
       }
     })
@@ -154,15 +166,8 @@ export default class Nav extends React.Component {
     window.location.replace("http://localhost:3000/")
     console.log("log me out")
     sessionStorage.clear()
-    sessionStorage.setItem("logout", "hidden")
-    sessionStorage.setItem("signin", "")
-    sessionStorage.setItem("signup", "")
-    sessionStorage.setItem("list", "hidden")
-
+    
   }
-
-
-
 
   openModal1() {
     this.setState({ modal1IsOpen: true });
@@ -180,69 +185,7 @@ export default class Nav extends React.Component {
     this.setState({ modal2IsOpen: false });
   }
 
-  /*_logout(event) {
-    event.preventDefault()
-    console.log('logging out')
-    axios.post('/auth/logout').then(response => {
-
-      if (response.status === 200) {
-        this.setState({
-          loggedIn: false,
-          user: null,
-          hideLogin: false,
-          hideSignup: false,
-          hideAccount: true,
-          hideLogout: true
-        })
-      }
-    })
-  }
-
-  _login(username, password) {
-    axios
-      .post('/auth/login', {
-        username,
-        password
-      })
-      .then(response => {
-        if (response.status === 200) {
-          this.setState({
-            loggedIn: true,
-            user: response.data.user,
-            hideAccount: false,
-            hideLogout: false,
-            hideLogin: true,
-            hideSignup: true,
-            modal1IsOpen: false,
-            loginError: false,
-            usernameLogin: "",
-            passwordLogin: ""
-          })
-        }
-      })
-      .catch(error => {
-        if (error.response.status) {
-          this.setState({
-            loginError: true
-          })
-        }
-      })
-  }*/
-
-
-  /*renderLogButtons = (bol) =>{
-console.log('this runs')
-    if(bol === true){
-      return(<a className=' waves-effect waves-light btn modal-trigger' id="logOutButton" onClick={this.handleUserLogout} >Log Out</a>)
-    } else{
-      return( <div>
-        <a className=' waves-effect waves-light btn modal-trigger' id="signInButton" onClick={this.openModal1} >Sign In</a>
-        <a className=' waves-effect waves-light btn blue' id="signupButton" onClick={this.openModal2}>Sign Up</a>
-        </div>)
-    }
-  }*/
-
-
+  
   render() {
     console.log(this.state)
     return (
@@ -263,6 +206,7 @@ console.log('this runs')
                 Home
           			</Link>
             </li>
+
             <li
               className={
                 window.location.pathname === "/movielist"
@@ -271,9 +215,10 @@ console.log('this runs')
               }
             >
               <Link to="/movielist" className="nav-link">
-                <a className={this.state.hidelist}>Your List</a>
+                <a className={this.state.loginError ? '' : 'hidden'}>Your List</a>
           			</Link>
             </li>
+
             <li
               className={
                 window.location.pathname === "/search"
@@ -285,7 +230,7 @@ console.log('this runs')
                 <i className="material-icons nav-search">search</i>
               </Link>
             </li>
-            <a className={this.state.hideLogout + ' waves-effect waves-light btn modal-trigger'} id="logOutButton" onClick={this.handleUserLogout} >Log Out</a>
+            <a className={this.state.loginError ? 'waves-effect waves-light btn modal-trigger' : 'hidden'} id="logOutButton" onClick={this.handleUserLogout} >Log Out</a>
             <a className={this.state.hideLogin + ' waves-effect waves-light btn modal-trigger'} id="signInButton" onClick={this.openModal1} >Sign In</a>
             <a className={this.state.hideSignup + ' waves-effect waves-light btn blue'} id="signupButton" onClick={this.openModal2}>Sign Up</a>
             {/* {this.renderLogButtons(this.state.logIn)} */}

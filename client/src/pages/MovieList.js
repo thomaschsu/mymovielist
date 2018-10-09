@@ -14,9 +14,11 @@ class MovieList extends Component {
 	};
 
 	getMovies = cb => {
+
 		API.getMovies(sessionStorage.getItem("username").slice(1, -1))
 			.then(res => this.setState({ allMovies: res.data[0].movieArr }, cb))
 			.catch(err => console.log(err));
+
 	}
 
 	resetMovies = cb => {
@@ -83,14 +85,14 @@ class MovieList extends Component {
 			event.target.dataset.title,
 			event.target.dataset.ddtype,
 			event.target.value
-		).then(this.getMovies(() => {}));
+		).then(this.getMovies(() => { }));
 	};
 
 	handleRemove = event => {
 		API.removeMovie(
 			sessionStorage.getItem("username").slice(1, -1),
 			event.target.dataset.title
-		).then(this.getMovies(() => {}));
+		).then(this.getMovies(() => { }));
 	};
 
 	componentDidMount = () => {

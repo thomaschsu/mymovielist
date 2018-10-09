@@ -58,7 +58,9 @@ class Search extends Component {
 				image: res.data.Poster,
 				director: res.data.Director
 			};
+
 			API.addMovie(sessionStorage.getItem("username").slice(1, -1), movie)
+
 		});
 	};
 
