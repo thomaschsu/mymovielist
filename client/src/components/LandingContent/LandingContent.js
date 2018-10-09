@@ -22,7 +22,7 @@ const LandingContent = () => (
                                     </li>
 
                                     <li className="carousel-item">
-                                        <img alt="Halloween Poster" src="halloween.jpg" />
+                                        <img alt="Halloween Poster" src="halloween.png" />
                                     </li>
 
                                     <li className="carousel-item">
@@ -30,7 +30,7 @@ const LandingContent = () => (
                                     </li>
 
                                     <li className="carousel-item">
-                                        <img alt="Night School Poster" src="nightSchool.jpg" />
+                                        <img alt="Night School Poster" src="night-school.png" />
                                     </li>
 
                                     <li className="carousel-item">
