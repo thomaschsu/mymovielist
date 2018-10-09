@@ -59,3 +59,38 @@
     padding: 10px 15px;
     color: #FFF;
 }
+
+.movie-title {
+    color: #FFF;
+    text-shadow: 1px 1px #000;
+    background-color: #cfd8dc;
+    padding: 5px 0;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.movie-title-blue {
+    color: #337ab7;
+}
+
+.movie-poster-detailed {
+    float: left;
+    margin-right: 20px;
+}
+
+.movie-plot {
+    color: #FFF;
+    text-align: center;
+}
+
+.movie-information {
+    color: #222;
+    padding: 10px 5px;
+    background-color: #FFF;
+    margin: 0;
+}
+
+.movie-information:nth-child(odd) {
+    background-color: #eee;
+}

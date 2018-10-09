@@ -4,11 +4,13 @@ import API from "../utils/API"
 
 class MovieInfo extends Component {
 	state = {
-		movie: {Ratings: [
-			{Value: ""},
-			{Value: ""},
-			{Value: ""}
-		]}
+		movie: {
+			Ratings: [
+				{ Value: "" },
+				{ Value: "" },
+				{ Value: "" }
+			]
+		}
 	}
 
 	componentDidMount() {
@@ -16,36 +18,44 @@ class MovieInfo extends Component {
 		API.searchOne(movieId).then(res => {
 			this.setState({
 				movie: res.data
-			}, () => {console.log(this.state.movie)});
+			}, () => { console.log(this.state.movie) });
 		});
 	}
 
 	render() {
-		return(
+		return (
 			<Wrapper>
-				<img src={this.state.movie.Poster === "N/A" || !this.state.movie.Poster ? "/nopicture.png" : this.state.movie.Poster} alt="Movie Poster"></img>
-				{this.state.movie.Response === "True" ? (
-					<div>
-						<h2>{this.state.movie.Title}</h2>
-						<span>{this.state.movie.Year}</span>
-						<p>{this.state.movie.Plot}</p>
-						<p>Genres: {this.state.movie.Genre}</p>
-						<p>Rated: {this.state.movie.Rated}</p>
-						<p>Director: {this.state.movie.Director}</p>
-						<p>Actors: {this.state.movie.Actors}</p>
-						<p>Writer: {this.state.movie.Writer}</p>
-						<p>IMDB Score: {this.state.movie.Ratings[0].Value}</p>
-						<p>Rotten Tomatoes Score: {this.state.movie.Ratings[1].Value}</p>
-						<p>Metacritic Score: {this.state.movie.Ratings[2].Value}</p>
-						<p>Country of Origin: {this.state.movie.Country}</p>
-						<p>Original Language: {this.state.movie.Language}</p>
-						<p>US Release: {this.state.movie.Released}</p>
-						<p>Runtime: {this.state.movie.Runtime}</p>
-						<p>Box Office Revenue: {this.state.movie.BoxOffice}</p>
-						<p>Producer: {this.state.movie.Production}</p>
-						<p>Awards: {this.state.movie.Awards}</p>
-					</div>
-				) : <h2>Movie not found</h2>}
+				<table className="animated fadeInDownBig">
+					<tbody>
+						<tr>
+							<td><img src={this.state.movie.Poster === "N/A" || !this.state.movie.Poster ? "/nopicture.png" : this.state.movie.Poster} alt="Movie Poster" className="movie-poster-detailed"></img></td>
+							<td>{this.state.movie.Response === "True" ? (
+								<div>
+									<h5 className="movie-title"><span className="movie-title-blue">{this.state.movie.Title}</span> ({this.state.movie.Year})</h5>
+									<p className="movie-plot">{this.state.movie.Plot}</p>
+									<div>
+									<p className="movie-information"><b>Genres: </b>{this.state.movie.Genre}</p>
+									<p className="movie-information"><b>Rated: </b>{this.state.movie.Rated}</p>
+									<p className="movie-information"><b>Director: </b>{this.state.movie.Director}</p>
+									<p className="movie-information"><b>Actors: </b>{this.state.movie.Actors}</p>
+									<p className="movie-information"><b>Writer: </b>{this.state.movie.Writer}</p>
+									<p className="movie-information"><b>IMDB Score: </b>{this.state.movie.Ratings[0].Value}</p>
+									<p className="movie-information"><b>Rotten Tomatoes Score: </b>{this.state.movie.Ratings[1].Value}</p>
+									<p className="movie-information"><b>Metacritic Score: </b>{this.state.movie.Ratings[2].Value}</p>
+									<p className="movie-information"><b>Country of Origin: </b>{this.state.movie.Country}</p>
+									<p className="movie-information"><b>Original Language: </b>{this.state.movie.Language}</p>
+									<p className="movie-information"><b>US Release: </b>{this.state.movie.Released}</p>
+									<p className="movie-information"><b>Runtime: </b>{this.state.movie.Runtime}</p>
+									<p className="movie-information"><b>Box Office Revenue: </b>{this.state.movie.BoxOffice}</p>
+									<p className="movie-information"><b>Producer: </b>{this.state.movie.Production}</p>
+									<p className="movie-information"><b>Awards: </b>{this.state.movie.Awards}</p>
+									</div>
+									
+								</div>
+							) : <h2>Movie not found</h2>}</td>
+						</tr>
+					</tbody>
+				</table>
 			</Wrapper>
 		);
 	}
