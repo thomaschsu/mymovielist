@@ -48,6 +48,11 @@ class Search extends Component {
 	};
 
 	handleAddToList = event => {
+		event.persist();
+		if (event.target.textContent === "clear") {
+			this.handleDeleteFromList(event);
+			return;
+		}
 		const movieId = event.target.dataset.imdb;
 		let movie = {};
 		API.searchOne(movieId).then(res => {
@@ -59,7 +64,19 @@ class Search extends Component {
 				image: res.data.Poster,
 				director: res.data.Director
 			};
-			API.addMovie(sessionStorage.getItem("username").slice(1, -1), movie)
+			API.addMovie(sessionStorage.getItem("username").slice(1, -1), movie).then(() => {
+				event.target.textContent = "clear";
+				event.target.classList.toggle("red");
+			});
+		});
+	};
+
+	handleDeleteFromList = event => {
+		const movieId = event.target.dataset.imdb;
+
+		API.removeMovie(sessionStorage.getItem("username").slice(1, -1), movieId).then(() => {
+			event.target.textContent = "add";
+			event.target.classList.toggle("red");
 		});
 	};
 
