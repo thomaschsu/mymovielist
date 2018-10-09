@@ -20,7 +20,7 @@ module.exports = {
 			console.log(`updating status of ${req.body.movie} to ${req.body.value} on ${req.params.user}'s list`);
 			db.User
 				.updateOne(
-					{ username: req.params.user, "movieArr.title": req.body.movie },
+					{ username: req.params.user, "movieArr.imdbId": req.body.movie },
 					{ $set: { "movieArr.$.status": req.body.value } }
 				).then(dbModel => {
 					console.log(dbModel);
@@ -31,7 +31,7 @@ module.exports = {
 			console.log(`updating score of ${req.body.movie} to ${req.body.value} on ${req.params.user}'s list`);
 			db.User
 				.updateOne(
-					{ username: req.params.user, "movieArr.title": req.body.movie },
+					{ username: req.params.user, "movieArr.imdbId": req.body.movie },
 					{ $set: { "movieArr.$.score": req.body.value } }
 				).then(dbModel => {
 					console.log(dbModel);
@@ -43,7 +43,7 @@ module.exports = {
 			db.User
 				.updateOne(
 					{ username: req.params.user },
-					{ $pull: { movieArr: { title: req.body.movie } } }
+					{ $pull: { movieArr: { imdbId: req.body.movie } } }
 				).then(dbModel => {
 					console.log(dbModel);
 					res.json(dbModel)

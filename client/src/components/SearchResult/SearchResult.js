@@ -1,5 +1,6 @@
-import React from "react"
-import "./SearchResult.css"
+import React from "react";
+import { Link } from "react-router-dom";
+import "./SearchResult.css";
 
 const SearchResult = props => (
 	<div className="movSearch animated fadeInDownBig delay-2s">
@@ -7,7 +8,7 @@ const SearchResult = props => (
 		<a onClick={props.click} className="btn-floating btn-med waves-effect waves-light red"><i className="material-icons">ondemand_video</i></a>
 		<a onClick={props.click} className="btn-floating btn-med waves-effect waves-light green"><i className="material-icons" data-imdb={props.imdb}>add</i></a>
 		<div className="titleContainer">
-		<span className="movTitle">{props.title} </span>
+		<span className="movTitle"><Link to={`/movieinfo/${props.imdb}`}>{props.title}</Link></span>
 		<span className="movYear">({props.year})</span>
 		</div>
 	</div>

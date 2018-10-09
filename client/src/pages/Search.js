@@ -53,6 +53,7 @@ class Search extends Component {
 		API.searchOne(movieId).then(res => {
 			movie = {
 				title: res.data.Title,
+				imdbId: movieId,
 				score: "-",
 				status: "completed",
 				image: res.data.Poster,
