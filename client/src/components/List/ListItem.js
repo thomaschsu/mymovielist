@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ListItem = props => (
   <tr className="list-group-item">
     <td></td>
     <td><img src={props.image === "N/A" || !props.image ? "/nopicture.png" : props.image} className="list-item-img" alt="movie-poster"></img></td>
-    <td>{props.title}</td>
+    <td><Link to={`/movieinfo/${props.imdb}`}>{props.title}</Link></td>
     <td>
       <select data-imdb={props.imdb} data-ddtype="score" onChange={props.dropdown}>
         <option value="10" selected={props.score === "10"}>10</option>

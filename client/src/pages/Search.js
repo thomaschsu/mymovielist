@@ -9,7 +9,8 @@ class Search extends Component {
 		search: "",
 		results: [],
 		page: 1,
-		maxPage: 1
+		maxPage: 1,
+		listIds: []
 	};
 
 	handleInputChange = event => {
@@ -48,6 +49,11 @@ class Search extends Component {
 	};
 
 	handleAddToList = event => {
+		event.persist();
+		if (event.target.textContent === "clear") {
+			this.handleDeleteFromList(event);
+			return;
+		}
 		const movieId = event.target.dataset.imdb;
 		let movie = {};
 		API.searchOne(movieId).then(res => {
@@ -59,9 +65,34 @@ class Search extends Component {
 				image: res.data.Poster,
 				director: res.data.Director
 			};
-			API.addMovie(sessionStorage.getItem("username").slice(1, -1), movie)
+			API.addMovie(sessionStorage.getItem("username").slice(1, -1), movie).then(() => {
+				this.setState({
+					listIds: [...this.state.listIds, movieId]
+				});
+			});
 		});
 	};
+
+	handleDeleteFromList = event => {
+		const movieId = event.target.dataset.imdb;
+
+		API.removeMovie(sessionStorage.getItem("username").slice(1, -1), movieId).then(() => {
+			let newList = this.state.listIds;
+			newList.splice(this.state.listIds.indexOf(movieId), 1);
+			console.log(newList)
+			this.setState({
+				listIds: newList
+			});
+		});
+	};
+
+	componentDidMount() {
+		API.getMovies(sessionStorage.getItem("username").slice(1, -1)).then(res => {
+			this.setState({
+				listIds: res.data[0].movieArr.map(movie => movie.imdbId)
+			}, () => {console.log(this.state.listIds)});
+		});
+	}
 
 	render() {
 		return (
@@ -71,7 +102,7 @@ class Search extends Component {
 					{this.state.results.length > 0 && this.state.page > 1 ? <button onClick={this.handlePagination} className="previous-page">Previous</button> : ""}
 					{this.state.results.length > 0 && this.state.page < this.state.maxPage ? <button onClick={this.handlePagination} className="next-page">Next</button> : ""}
 					<div>
-						{this.state.results.map(element => <SearchResult title={element.Title} image={element.Poster} year={element.Year} key={element.imdbID} imdb={element.imdbID} click={this.handleAddToList} />)}
+						{this.state.results.map(element => <SearchResult title={element.Title} image={element.Poster} year={element.Year} key={element.imdbID} imdb={element.imdbID} click={this.handleAddToList} added={this.state.listIds.includes(element.imdbID)} />)}
 					</div>
 				</Wrapper>
 			</div>
