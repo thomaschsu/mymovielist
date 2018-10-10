@@ -71,7 +71,16 @@ export default class Nav extends React.Component {
   }
 
   componentDidMount() {
-    sessionStorage.setItem("list", "hidden");
+    console.log(sessionStorage.length);
+    if (sessionStorage.length === 0) {
+      this.setState({
+        loginError: false
+      })
+    } else {
+      this.setState({
+        loginError: true
+      })
+    }
   }
 
   //   //--Optional, this checks to see if a user is logged in and if so...
@@ -271,7 +280,7 @@ console.log('this runs')
               }
             >
               <Link to="/movielist" className="nav-link">
-                <a className={this.state.hidelist}>Your List</a>
+              <a className={this.state.loginError ? '' : 'hidden'}>Your List</a>
           			</Link>
             </li>
             <li
@@ -285,7 +294,7 @@ console.log('this runs')
                 <i className="material-icons nav-search">search</i>
               </Link>
             </li>
-            <a className={this.state.hideLogout + ' waves-effect waves-light btn modal-trigger'} id="logOutButton" onClick={this.handleUserLogout} >Log Out</a>
+            <a className={this.state.loginError ? 'waves-effect waves-light btn modal-trigger' : 'hidden'} id="logOutButton" onClick={this.handleUserLogout} >Log Out</a>
             <a className={this.state.hideLogin + ' waves-effect waves-light btn modal-trigger'} id="signInButton" onClick={this.openModal1} >Sign In</a>
             <a className={this.state.hideSignup + ' waves-effect waves-light btn blue'} id="signupButton" onClick={this.openModal2}>Sign Up</a>
             {/* {this.renderLogButtons(this.state.logIn)} */}
