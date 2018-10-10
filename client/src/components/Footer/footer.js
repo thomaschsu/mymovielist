@@ -1,8 +1,37 @@
-import React from 'react';
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import './Footer.css';
 
-const Footer = () => (
+class Footer extends Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+      loginError: false,
+      logIn: false
+
+    };
+
+  }
+
+  componentDidMount() {
+    console.log(sessionStorage.length);
+    if (sessionStorage.length === 0) {
+      this.setState({
+        loginError: false
+      })
+    } else {
+      this.setState({
+        loginError: true
+      })
+    }
+  }
+
+
+
+  render() {
+    return(
   <footer className="page-footer">
     <div className="container">
       <div className="row">
@@ -17,10 +46,10 @@ const Footer = () => (
               <li><Link to="/" className="nav-link">
                 Home
           			</Link></li>
-              <li><Link to="/movielist" className="nav-link">
+              <li className={this.state.loginError ? '' : 'hidden'}><Link to="/movielist" className="nav-link">
                 Your List
           			</Link></li>
-              <li><Link to="/search" className="nav-link">
+              <li className={this.state.loginError ? '' : 'hidden'}><Link to="/search" className="nav-link">
                 Search
          			</Link></li>
             </ul>
@@ -74,6 +103,9 @@ const Footer = () => (
 
 
   </footer>
+    )
+  }
+}
 
-);
+
 export default Footer;
