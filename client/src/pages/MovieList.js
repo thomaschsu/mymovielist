@@ -94,7 +94,24 @@ class MovieList extends Component {
 	};
 
 	componentDidMount = () => {
-		this.getMovies(this.resetMovies);
+		this.getMovies(() => {
+			this.resetMovies(() => {
+				const status = window.location.href.split("/").pop();
+				switch (status) {
+					case "completed":
+						this.handleStatusChange({target: {textContent: "Completed"}});
+						break;
+
+					case "dropped":
+						this.handleStatusChange({target: {textContent: "Dropped"}});
+						break;
+
+					case "ptw":
+						this.handleStatusChange({target: {textContent: "Plan to Watch"}});
+						break;
+				}
+			});
+		});
 	};
 
 	render() {
