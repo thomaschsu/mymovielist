@@ -1,4 +1,5 @@
 const db = require("../models");
+const movieTrailer = require('movie-trailer');
 
 module.exports = {
 	findAll: function (req, res) {
@@ -50,5 +51,10 @@ module.exports = {
 				})
 				.catch(err => res.status(422).json(err));
 		}
+	},
+	trailers: function(req, res) {
+		movieTrailer(req.body.title, req.body.year).then(
+			response => res.send(response)
+		);
 	}
 };
