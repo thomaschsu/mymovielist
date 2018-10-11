@@ -39,9 +39,15 @@ class MovieInfo extends Component {
 									<p className="movie-information"><b>Director: </b>{this.state.movie.Director}</p>
 									<p className="movie-information"><b>Actors: </b>{this.state.movie.Actors}</p>
 									<p className="movie-information"><b>Writer: </b>{this.state.movie.Writer}</p>
-									<p className="movie-information"><b>IMDB Score: </b>{this.state.movie.Ratings[0].Value}</p>
-									<p className="movie-information"><b>Rotten Tomatoes Score: </b>{this.state.movie.Ratings[1].Value}</p>
-									<p className="movie-information"><b>Metacritic Score: </b>{this.state.movie.Ratings[2].Value}</p>
+									{this.state.movie.Ratings[0] ?
+										<p className="movie-information"><b>IMDB Score: </b>{this.state.movie.Ratings[0].Value}</p>
+									: ""}
+									{this.state.movie.Ratings[1] ?
+										<p className="movie-information"><b>Rotten Tomatoes Score: </b>{this.state.movie.Ratings[1].Value}</p>
+									: ""}
+									{this.state.movie.Ratings[2] ?
+										<p className="movie-information"><b>Metacritic Score: </b>{this.state.movie.Ratings[2].Value}</p>
+									: ""}
 									<p className="movie-information"><b>Country of Origin: </b>{this.state.movie.Country}</p>
 									<p className="movie-information"><b>Original Language: </b>{this.state.movie.Language}</p>
 									<p className="movie-information"><b>US Release: </b>{this.state.movie.Released}</p>
@@ -50,7 +56,7 @@ class MovieInfo extends Component {
 									<p className="movie-information"><b>Producer: </b>{this.state.movie.Production}</p>
 									<p className="movie-information"><b>Awards: </b>{this.state.movie.Awards}</p>
 									</div>
-									
+
 								</div>
 							) : <h2>Movie not found</h2>}</td>
 						</tr>

@@ -10,11 +10,12 @@ import Wrapper from "../components/Wrapper";
 class MovieList extends Component {
 	state = {
 		movies: [],
-		allMovies: []
+		allMovies: [],
+		username: ""
 	};
 
 	getMovies = cb => {
-		API.getMovies(sessionStorage.getItem("username").slice(1, -1))
+		API.getMovies(this.state.username)
 			.then(res => this.setState({ allMovies: res.data[0].movieArr }, cb))
 			.catch(err => console.log(err));
 	}
@@ -79,7 +80,7 @@ class MovieList extends Component {
 
 	handleDropdowns = event => {
 		API.updateMovie(
-			sessionStorage.getItem("username").slice(1, -1),
+			this.state.username,
 			event.target.dataset.imdb,
 			event.target.dataset.ddtype,
 			event.target.value
@@ -88,34 +89,45 @@ class MovieList extends Component {
 
 	handleRemove = event => {
 		API.removeMovie(
-			sessionStorage.getItem("username").slice(1, -1),
+			this.state.username,
 			event.target.dataset.imdb
 		).then(this.getMovies(() => {}));
 	};
 
 	componentDidMount = () => {
-		this.getMovies(() => {
-			this.resetMovies(() => {
-				const status = window.location.href.split("/").pop();
-				switch (status) {
-					case "completed":
-						this.handleStatusChange({target: {textContent: "Completed"}});
-						break;
+		let urlArr = window.location.href.split("/");
+		const status = urlArr[urlArr.length-1];
+		let user = "";
+		if (status === "completed" || status === "dropped" || status === "ptw")
+			user = urlArr[urlArr.length-2];
+		else
+			user = status
 
-					case "dropped":
-						this.handleStatusChange({target: {textContent: "Dropped"}});
-						break;
+		this.setState({
+			username: user
+		}, () => {
+			this.getMovies(() => {
+				this.resetMovies(() => {
+					switch (status) {
+						case "completed":
+							this.handleStatusChange({target: {textContent: "Completed"}});
+							break;
 
-					case "ptw":
-						this.handleStatusChange({target: {textContent: "Plan to Watch"}});
-						break;
+						case "dropped":
+							this.handleStatusChange({target: {textContent: "Dropped"}});
+							break;
 
-					default:
-						this.handleStatusChange({target: {textContent: "All Movies"}});
-						break;
-				}
+						case "ptw":
+							this.handleStatusChange({target: {textContent: "Plan to Watch"}});
+							break;
+
+						default:
+							this.handleStatusChange({target: {textContent: "All Movies"}});
+							break;
+					}
+				});
 			});
-		});
+		})
 	};
 
 	render() {
@@ -127,8 +139,8 @@ class MovieList extends Component {
 						<h1 className="jumbo-title">MyMovieList</h1>
 						<h1 className="jumbo-small">HOW MANY MOVIES HAVE YOU SEEN?</h1>
 					</Jumbotron>
-					<MovieNav function={this.handleStatusChange}></MovieNav>
-					<List delete={this.handleRemove} dropdown={this.handleDropdowns} movies={this.state.movies} />
+					<MovieNav username={this.state.username} function={this.handleStatusChange}></MovieNav>
+					<List delete={this.handleRemove} dropdown={this.handleDropdowns} movies={this.state.movies}/>
 				</Wrapper>
 				<SideNav />
 			</div>
