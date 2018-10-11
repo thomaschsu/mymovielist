@@ -109,6 +109,10 @@ class MovieList extends Component {
 					case "ptw":
 						this.handleStatusChange({target: {textContent: "Plan to Watch"}});
 						break;
+
+					default:
+						this.handleStatusChange({target: {textContent: "All Movies"}});
+						break;
 				}
 			});
 		});
