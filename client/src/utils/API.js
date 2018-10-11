@@ -20,6 +20,6 @@ export default {
 		return axios.put(`/api/list/${user}`, {movie: movie, type: "remove"});
 	},
 	getTrailer: function(title, year) {
-		return axios.get(`/api`, {title: title, year: year});
+		return axios.get(`/api/trailers`, {title: title, year: year});
 	}
 }
