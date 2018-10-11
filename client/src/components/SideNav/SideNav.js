@@ -25,17 +25,15 @@ class SideNav extends Component {
         <ul>
 
           <li>
-            <a className="small material-icons modal-trigger tooltipped" href="#modal2" id="add" data-position="right" data-tooltip="Quick Add Movie">playlist_add</a>
-            <div id="modal2" className="modal bottom-sheet">
-              <div className="modal-content">
-                <h4>Quick Add Movie</h4>
-                <SearchBar />
-                <SearchResult />
-              </div>
-              <div className="modal-footer">
-                <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
-              </div>
+            <a className="small material-icons modal-trigger tooltipped" href="#modal2" id="person_add" data-position="right" data-tooltip="add friend">person_add</a>
+            <div id="modal2" className="modal modal-fixed-footer">
+            <div className="modal-content">
+              <h4>Add Friend</h4>
             </div>
+            <div className="modal-footer">
+              <a href="#!" className="modal-close waves-effect waves-green btn-flat">Done</a>
+            </div>
+          </div>
           </li>
 
           <li>
