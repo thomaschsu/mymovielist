@@ -36,12 +36,12 @@ class Search extends Component {
 	};
 
 	handlePagination = event => {
-		if (event.target.textContent === "Previous") {
+		if (event.target.textContent === "chevron_left") {
 			this.setState({
 				page: (this.state.page - 1)
 			}, this.searchAPI);
 		}
-		else if (event.target.textContent === "Next") {
+		else if (event.target.textContent === "chevron_right") {
 			this.setState({
 				page: (this.state.page + 1)
 			}, this.searchAPI);
@@ -99,8 +99,8 @@ class Search extends Component {
 			<div>
 				<Wrapper>
 					<SearchBar changefunc={this.handleInputChange} submitfunc={this.handleFormSubmit} />
-					{this.state.results.length > 0 && this.state.page > 1 ? <button onClick={this.handlePagination} className="previous-page">Previous</button> : ""}
-					{this.state.results.length > 0 && this.state.page < this.state.maxPage ? <button onClick={this.handlePagination} className="next-page">Next</button> : ""}
+					{this.state.results.length > 0 && this.state.page > 1 ? <button onClick={this.handlePagination} className="previous-page"><i class="small material-icons">chevron_left</i></button> : ""}
+					{this.state.results.length > 0 && this.state.page < this.state.maxPage ? <button onClick={this.handlePagination} className="next-page"><i class="small material-icons">chevron_right</i></button> : ""}
 					<div>
 						{this.state.results.map(element => <SearchResult title={element.Title} image={element.Poster} year={element.Year} key={element.imdbID} imdb={element.imdbID} click={this.handleAddToList} added={this.state.listIds.includes(element.imdbID)} />)}
 					</div>

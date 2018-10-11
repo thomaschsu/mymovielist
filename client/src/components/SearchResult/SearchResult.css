@@ -42,7 +42,7 @@
 
 .next-page {
     margin: 20px 0 0 20px;
-    background-color: #1565c0;
+    background-color: transparent;
     border: none;
     border-radius: 5px;
     text-shadow: 1px 1px #000;
@@ -50,9 +50,16 @@
     color: #FFF;
 }
 
+.next-page:focus {
+    background-color: transparent;
+}
+
+.previous-page:focus {
+    background-color: transparent;
+}
+
 .previous-page {
-    margin: 20px 0 0 20px;
-    background-color: #1565c0;
+    background-color: transparent;
     border: none;
     border-radius: 5px;
     text-shadow: 1px 1px #000;
