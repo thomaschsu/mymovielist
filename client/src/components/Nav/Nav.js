@@ -276,12 +276,12 @@ export default class Nav extends React.Component {
 						{sessionStorage.getItem("username") ?
 							<li
 								className={
-									window.location.pathname === "/movielist"
+									window.location.pathname === `/movielist/${sessionStorage.getItem("username").slice(1, -1)}`
 										? "nav-item active"
 										: "nav-item"
 								}
 							>
-								<Link to="/movielist" className="nav-link">
+								<Link to={`/movielist/${sessionStorage.getItem("username").slice(1, -1)}`} className="nav-link">
 									<a className={this.state.loginError ? '' : 'hidden'}>Your List</a>
 								</Link>
 							</li>
@@ -306,7 +306,7 @@ export default class Nav extends React.Component {
 						: ""}
 
 						<a className={this.state.hideLogin + ' waves-effect waves-light btn modal-trigger'} id="signInButton" onClick={this.openModal1} >Sign In</a>
-						
+
 						<a className={this.state.hideSignup + ' waves-effect waves-light btn blue'} id="signupButton" onClick={this.openModal2}>Sign Up</a>
 						{/* {this.renderLogButtons(this.state.logIn)} */}
 					</ul>
