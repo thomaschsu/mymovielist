@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "./SideNav.css";
-import SearchBar from "../SearchBar";
-import SearchResult from "../SearchResult";
 
 class SideNav extends Component {
 
@@ -27,13 +25,13 @@ class SideNav extends Component {
           <li>
             <a className="small material-icons modal-trigger tooltipped" href="#modal2" id="person_add" data-position="right" data-tooltip="add friend">person_add</a>
             <div id="modal2" className="modal modal-fixed-footer">
-            <div className="modal-content">
-              <h4>Add Friend</h4>
+              <div className="modal-content">
+                <h4>Add Friend</h4>
+              </div>
+              <div className="modal-footer">
+                <a href="#!" className="modal-close waves-effect waves-green btn-flat">Done</a>
+              </div>
             </div>
-            <div className="modal-footer">
-              <a href="#!" className="modal-close waves-effect waves-green btn-flat">Done</a>
-            </div>
-          </div>
           </li>
 
           <li>
