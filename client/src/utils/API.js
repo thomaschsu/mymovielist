@@ -18,5 +18,8 @@ export default {
 	},
 	removeMovie: function(user, movie) {
 		return axios.put(`/api/list/${user}`, {movie: movie, type: "remove"});
+	},
+	getTrailer: function(title, year) {
+		return axios.get(`/api/trailers/${title}/${year}`)
 	}
 }
