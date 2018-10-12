@@ -19,9 +19,9 @@ class MovieInfo extends Component {
 			this.setState({
 				movie: res.data
 			}, () => {
-				API.getTrailer(this.state.movie.Title, this.state.movie.Year).then(res => {
+				API.getTrailer(this.state.movie.Title, this.state.movie.Year).then(response => {
 					this.setState({
-						trailerUrl: res
+						trailerUrl: response.data
 					});
 				});
 			});
@@ -68,7 +68,7 @@ class MovieInfo extends Component {
 						</tr>
 					</tbody>
 				</table>
-				<iframe width="420" height="315" src={this.state.trailerUrl}></iframe>
+				<iframe style={{"z-index": "999"}} width="560" height="315" src={this.state.trailerUrl} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			</Wrapper>
 		);
 	}

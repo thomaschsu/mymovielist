@@ -53,8 +53,10 @@ module.exports = {
 		}
 	},
 	trailers: function(req, res) {
-		movieTrailer(req.body.title, req.body.year).then(
-			response => res.send(response)
-		);
+		// movieTrailer(req.params.title, req.params.year).then(
+		// 	response => res.send(response)
+		// );
+		console.log(req.params.title, req.params.year)
+		movieTrailer(req.params.title, req.params.year).then(response => res.json(response))
 	}
 };
