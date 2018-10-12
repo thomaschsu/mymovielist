@@ -69,7 +69,7 @@ class MovieInfo extends Component {
 						</tr>
 					</tbody>
 				</table>
-				<iframe style={{"z-index": "999"}} width="560" height="315" src={this.state.trailerUrl} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<iframe style={{"z-index": "999"}} width="560" height="315" title="movie-trailer" src={this.state.trailerUrl} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			</Wrapper>
 		);
 	}
