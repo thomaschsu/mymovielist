@@ -2,14 +2,10 @@ const path = require("path");
 const router = require("express").Router();
 const apiRoutes = require("./api");
 const authRoutes = require("./auth");
-const moviesController = require("../controllers/moviesController");
 
 // API Routes
 router.use("/api", apiRoutes);
 router.use("/auth", authRoutes);
-
-router.route("/trailers")
-	.get(moviesController.trailers);
 
 // If no API routes are hit, send the React app
 router.use(function(req, res) {
