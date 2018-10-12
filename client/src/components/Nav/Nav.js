@@ -153,7 +153,7 @@ export default class Nav extends React.Component {
 					// hideSignup: "hidden"
 					logIn: true
 				})
-				window.location.replace("http://localhost:3000/movielist")
+				window.location.replace(`http://localhost:3000/movielist/${sessionStorage.getItem("username").slice(1, -1)}`)
 			}
 		})
 	}
