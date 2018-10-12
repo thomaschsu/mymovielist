@@ -109,3 +109,11 @@
     display: block;
     margin: 10px auto;
 }
+
+.td-poster {
+    vertical-align: top;
+}
+
+.back-button {
+    margin-bottom: 20px;
+}
