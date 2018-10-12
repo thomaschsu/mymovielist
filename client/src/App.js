@@ -6,6 +6,7 @@ import MovieInfo from "./pages/MovieInfo";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Footer from "./components/Footer";
+import ScrollButton from "./components/ScrollUpButton";
 
 const App = () => (
 	<Router>
@@ -15,6 +16,7 @@ const App = () => (
 				<Route path="/movielist" component={MovieList} />
 				<Route path="/movieinfo" component={MovieInfo} />
 				<Route exact path="/search" component={Search} />
+				<ScrollButton />
 			<Footer />
 		</div>
 	</Router>
