@@ -18,7 +18,13 @@ class MovieInfo extends Component {
 		API.searchOne(movieId).then(res => {
 			this.setState({
 				movie: res.data
-			}, () => { console.log(this.state.movie) });
+			}, () => {
+				API.getTrailer(this.state.movie.Title, this.state.movie.Year).then(res => {
+					this.setState({
+						trailerUrl: res
+					});
+				});
+			});
 		});
 	}
 
@@ -62,6 +68,7 @@ class MovieInfo extends Component {
 						</tr>
 					</tbody>
 				</table>
+				<iframe width="420" height="315" src={this.state.trailerUrl}></iframe>
 			</Wrapper>
 		);
 	}
