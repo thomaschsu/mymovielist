@@ -15,6 +15,7 @@ class MovieInfo extends Component {
 
 	componentDidMount() {
 		const movieId = window.location.href.split("/").pop();
+		window.scrollTo(0, 0);
 		API.searchOne(movieId).then(res => {
 			this.setState({
 				movie: res.data
