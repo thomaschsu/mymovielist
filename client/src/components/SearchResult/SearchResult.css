@@ -104,3 +104,8 @@
 .movie-information:nth-child(odd) {
     background-color: #eee;
 }
+
+.iframe-trailer {
+    display: block;
+    margin: 10px auto;
+}

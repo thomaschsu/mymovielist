@@ -56,7 +56,14 @@ module.exports = {
 		// movieTrailer(req.params.title, req.params.year).then(
 		// 	response => res.send(response)
 		// );
-		console.log(req.params.title, req.params.year)
-		movieTrailer(req.params.title, req.params.year).then(response => res.json(response))
+		// Correct URL Start
+		const urlStart = "https://www.youtube.com/embed/";
+		const movieFunction = movieTrailer(req.params.title, req.params.year);
+		console.log(req.params.title, req.params.year);
+		movieFunction.then(function (response) {
+			response = response.substring((response.indexOf('='))+ 1), response.length;
+			response = urlStart + response;
+			return res.json(response);
+		});
 	}
 };
