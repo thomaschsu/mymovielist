@@ -96,10 +96,11 @@ class MovieList extends Component {
 	};
 
 	handleRemove = event => {
+		event.persist();
 		API.removeMovie(
 			this.state.username,
 			event.target.dataset.imdb
-		).then(this.getMovies(() => {}));
+		).then(this.getMovies(() => {console.log(event.target.parentNode.parentNode.parentNode.parentNode.removeChild(event.target.parentNode.parentNode.parentNode))}));
 	};
 
 	componentDidMount = () => {
