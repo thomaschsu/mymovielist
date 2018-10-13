@@ -26,7 +26,9 @@ const ListItem = props => (
         <option value="ptw" selected={props.status === "ptw"}>Plan to Watch</option>
       </select></td>
     <td>{props.director}</td>
-    <td><a onClick={props.delete} className="btn-floating btn-small waves-effect waves-light red"><i data-imdb={props.imdb} className="material-icons">clear</i></a></td>
+	{props.currentUser ?
+    	<td><a onClick={props.delete} className="btn-floating btn-small waves-effect waves-light red"><i data-imdb={props.imdb} className="material-icons">clear</i></a></td>
+		: ""}
   </tr>
 );
 
