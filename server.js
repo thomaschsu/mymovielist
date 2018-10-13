@@ -14,10 +14,6 @@ app.use(express.static("client/build"));
 app.use(routes);
 //app.use('/auth', require('./auth'));
 
-app.get('/*', function(req, res) {
-    res.sendFile('path to index.html');
-})
-
 // If deployed, use the deployed database. Otherwise use the local newsscrape database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mymovielist";
 
