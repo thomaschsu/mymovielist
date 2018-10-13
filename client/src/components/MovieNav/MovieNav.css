@@ -21,3 +21,13 @@
 	background: #337ab7;
 	color: #eee;
 }
+
+.list-user {
+	font-size: 12px;
+	margin-bottom: -10px;
+	margin-right: 0px;
+}
+
+.list-user span {
+	font-weight: bold;
+}
