@@ -36,6 +36,7 @@ const userSeed = [
 				"director" : "Damian Chazelle"
 			}
 		],
+		friendsArray: [],
 		createdAt: new Date(Date.now())
 	}
 ];
