@@ -4,8 +4,6 @@ const moviesController = require("../../controllers/moviesController");
 router.route("/:user")
   .get(moviesController.findAll)
   .post(moviesController.addMovie)
-  .put(moviesController.updateMovie)
-  .post(moviesController.addFriend);
-  
+  .put(moviesController.updateMovie);
 
 module.exports = router;

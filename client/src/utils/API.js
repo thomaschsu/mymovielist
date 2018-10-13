@@ -21,12 +21,5 @@ export default {
 	},
 	getTrailer: function(title, year) {
 		return axios.get(`/api/trailers/${title}/${year}`)
-	},
-	addFriend: function(user, friend) {
-		console.log("------Add Friend------");
-		console.log(user);
-		console.log(friend);
-		console.log("------Add Friend------");
-		return axios.post(`/api/list/${user}`, friend);
 	}
 }
