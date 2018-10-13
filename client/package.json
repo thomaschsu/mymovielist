@@ -2,6 +2,12 @@
 	"name": "themovielist",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "https://thomaschsu.github.io/mymovielist",
+	"homepage": "https://thomaschsu.github.io/mymovielist",
+	"homepage": "https://thomaschsu.github.io/mymovielist",
+	"homepage": "https://thomaschsu.github.io/mymovielist",
+	"homepage": "https://thomaschsu.github.io/mymovielist",
+	"homepage": "https://thomaschsu.github.io/mymovielist",
 	"proxy": "http://localhost:3001/",
 	"dependencies": {
 		"axios": "^0.16.2",
