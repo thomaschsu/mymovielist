@@ -3,6 +3,11 @@
 	"version": "0.1.0",
 	"private": true,
 	"homepage": "https://thomaschsu.github.io/mymovielist",
+	"homepage": "https://thomaschsu.github.io/mymovielist",
+	"homepage": "https://thomaschsu.github.io/mymovielist",
+	"homepage": "https://thomaschsu.github.io/mymovielist",
+	"homepage": "https://thomaschsu.github.io/mymovielist",
+	"homepage": "https://thomaschsu.github.io/mymovielist",
 	"proxy": "http://localhost:3001/",
 	"dependencies": {
 		"axios": "^0.16.2",
@@ -22,11 +27,6 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test --env=jsdom",
-		"eject": "react-scripts eject",
-		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build"
-	},
-	"devDependencies": {
-		"gh-pages": "^2.0.1"
+		"eject": "react-scripts eject"
 	}
 }
