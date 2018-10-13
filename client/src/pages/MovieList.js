@@ -11,7 +11,8 @@ class MovieList extends Component {
 	state = {
 		movies: [],
 		allMovies: [],
-		username: ""
+		username: "",
+		status: "all"
 	};
 
 	getMovies = cb => {
@@ -31,6 +32,10 @@ class MovieList extends Component {
 			//All Movies List
 			case "All Movies":
 				this.resetMovies(() => { });
+
+				this.setState({
+					status: "all"
+				});
 				break;
 
 			//Completed List
@@ -41,7 +46,8 @@ class MovieList extends Component {
 					));
 
 					this.setState({
-						movies: completedMovies
+						movies: completedMovies,
+						status: "completed"
 					});
 				});
 				break;
@@ -54,7 +60,8 @@ class MovieList extends Component {
 					));
 
 					this.setState({
-						movies: droppedMovies
+						movies: droppedMovies,
+						status: "dropped"
 					});
 				});
 				break;
@@ -67,7 +74,8 @@ class MovieList extends Component {
 					));
 
 					this.setState({
-						movies: ptwMovies
+						movies: ptwMovies,
+						status: "ptw"
 					});
 				});
 				break;
@@ -139,7 +147,7 @@ class MovieList extends Component {
 						<h1 className="jumbo-title">MyMovieList</h1>
 						<h1 className="jumbo-small">HOW MANY MOVIES HAVE YOU SEEN?</h1>
 					</Jumbotron>
-					<MovieNav username={this.state.username} function={this.handleStatusChange}></MovieNav>
+					<MovieNav status={this.state.status} username={this.state.username} function={this.handleStatusChange}></MovieNav>
 					<List currentUser={this.state.username === sessionStorage.getItem("username").slice(1, -1)} delete={this.handleRemove} dropdown={this.handleDropdowns} movies={this.state.movies}/>
 				</Wrapper>
 				<SideNav />
