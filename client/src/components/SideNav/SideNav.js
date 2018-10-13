@@ -35,19 +35,34 @@ class SideNav extends Component {
           </li>
 
           <li>
-            <a className="small material-icons tooltipped" href="##" id="chat" data-position="right" data-tooltip="Chat">chat</a>
+            <a className="small material-icons modal-trigger tooltipped" href="#modal1" id="contact_mail" data-position="right" data-tooltip="email">contact_mail</a>
+            <div id="modal1" className="modal modal-fixed-footer">
+              <div className="modal-content">
+                <h4>Contact Us!</h4>
+
+                <form method="POST" action="https://formspree.io/thomaschsu+mml@gmail.com">
+                  <input type="email" name="email" placeholder="Your email"/>
+                    <textarea name="message" placeholder="Your message"></textarea>
+                    <button type="submit">Send</button>
+</form>
+
+              </div>
+                <div className="modal-footer">
+                  <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
           </li>
 
-          <li>
-            <a className="small material-icons tooltipped" href="##" id="exit" onClick={this.handleUserLogout} data-position="right" data-tooltip="Log Out">exit_to_app </a>
-          </li>
+            <li>
+              <a className="small material-icons tooltipped" href="##" id="exit" onClick={this.handleUserLogout} data-position="right" data-tooltip="Log Out">exit_to_app </a>
+            </li>
 
         </ul>
       </div>
-    )
-  }
-}
-
-
-
+        )
+      }
+    }
+    
+    
+    
 export default SideNav;
