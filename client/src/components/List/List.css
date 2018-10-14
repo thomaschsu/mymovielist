@@ -65,3 +65,13 @@ select {
 td {
     border-radius: 0 !important;
 }
+
+th a {
+	color: #eee;
+	cursor: pointer;
+}
+
+th a:hover {
+	color: #eee;
+	cursor: pointer;
+}

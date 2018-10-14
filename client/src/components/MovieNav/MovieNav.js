@@ -6,8 +6,7 @@ const MovieNav = props => (
   <Router>
 	<div>
 		<div className="movie-menu">
-			<p className="list-user"> Viewing <span>{props.currentUser ? "Your" : `${props.username}'s`}</span> List
-			</p>
+			<p className="list-user"> Viewing <span>{props.currentUser ? "Your" : `${props.username}'s`}</span> List</p>
 		</div>
 		<div className="movie-menu">
 			<Link className={`menu-items link-effect ${props.status === "all" ? "movie-nav-active" :""}`} to={`/movielist/${props.username}`} onClick={props.function}>
