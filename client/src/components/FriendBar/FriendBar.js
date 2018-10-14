@@ -40,12 +40,13 @@ class FriendBar extends Component {
 		console.log("clicked");
 		console.log(event.target.id)
 		let friend = event.target.id
-		API.addFriend(sessionStorage.getItem("username").slice(1, -1), friend).then(console.log("added"))
-	}
+		window.location.replace("http://localhost:3000/movielist/" + friend)
+		// API.addFriend(sessionStorage.getItem("username").slice(1, -1), friend).then(console.log("added"))
+		}
 
 	userCall() {
 		axios.get('/auth/friends').then(response => {
-			console.log("got it")
+			// console.log("got it")
 			for (let j = 0; j < response.data.length; j++) {
 				let currentFriend = response.data[j].username;
 				if (this.state.friendSearch === currentFriend.substring(0, 1)) {
@@ -57,7 +58,7 @@ class FriendBar extends Component {
 							<hr></hr>
 						</div>
 					)
-					console.log(newF)
+					
 				}
 			}
 		})

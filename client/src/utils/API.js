@@ -27,6 +27,6 @@ export default {
 		// console.log(user);
 		// console.log(friend);
 		// console.log("------Add Friend------");
-		return axios.post(`/api/list/${user}`, friend);
+		return axios.post(`/api/friend/${user}`, friend);
 	}
 }
