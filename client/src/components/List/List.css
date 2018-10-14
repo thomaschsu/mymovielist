@@ -75,3 +75,19 @@ th a:hover {
 	color: #eee;
 	cursor: pointer;
 }
+
+.item-status {
+	width: 8px;
+}
+
+.item-status-completed {
+	background: #26448f;
+}
+
+.item-status-dropped {
+	background: #a12f31;
+}
+
+.item-status-ptw {
+	background: #c3c3c3;
+}
