@@ -67,7 +67,9 @@ module.exports = {
 		});
 	},
 	addFriend: function (req, res) {
+		console.log("-----REQ.BODY-----")
 		console.log(req.body)
+		console.log("-----REQ.BODY-----")
 		db.User
 			.updateOne(
 				{ username: req.params.user },

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./SideNav.css";
-import SearchBar from "../SearchBar";
+import FriendBar from "../FriendBar";
 
 
 
@@ -31,7 +31,7 @@ class SideNav extends Component {
             <div id="modal2" className="modal bottom-sheet">
               <div className="modal-content">
                 <h4>Add Friends</h4>
-                <SearchBar />
+                <FriendBar />
                 
               </div>
               <div className="modal-footer">
