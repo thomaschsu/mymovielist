@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ListItem = props => (
 	<tr className="list-group-item">
-		<td></td>
+		<td className={`item-status item-status-${props.status}`}></td>
 		<td><img src={props.image === "N/A" || !props.image ? "/nopicture.png" : props.image} className="list-item-img" alt="movie-poster"></img></td>
 		<td><Link to={`/movieinfo/${props.imdb}`}>{props.title}</Link></td>
 		<td>
@@ -35,7 +35,7 @@ const ListItem = props => (
 		<td>{props.director}</td>
 		{props.currentUser ?
 			<td><a onClick={props.delete} className="btn-floating btn-small waves-effect waves-light red"><i data-imdb={props.imdb} className="material-icons">clear</i></a></td>
-			: ""}
+			: " "}
 	</tr>
 );
 
