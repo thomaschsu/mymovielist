@@ -16,3 +16,8 @@
 .menu-items:hover {
     text-decoration: none;
 }
+
+.movie-nav-active{
+	background: #337ab7;
+	color: #eee;
+} 
