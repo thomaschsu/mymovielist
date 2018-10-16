@@ -321,7 +321,7 @@ export default class Nav extends React.Component {
 					contentLabel="Log In Modal"
 				>
 					<div className="modal-header">
-						<button type="button" className="close btn-floating btn-small waves-effect waves-light red animated tada delay-2s" onClick={this.closeModal1}><i class="material-icons right">close</i></button>
+						<button type="button" className="close btn-floating btn-small waves-effect waves-light red animated tada delay-2s" onClick={this.closeModal1}><i className="material-icons right">close</i></button>
 						<h3 className="modal-title">Login</h3>
 					</div>
 
@@ -336,7 +336,7 @@ export default class Nav extends React.Component {
 									placeholder="Username"
 									value={this.state.usernameInput}
 									onChange={this.handleChange}
-									autofocus="autofocus"
+									autoFocus="autofocus"
 									required></input>
 							</div>
 
@@ -357,7 +357,7 @@ export default class Nav extends React.Component {
 								className="btn waves-effect waves-light blue"
 								type="submit"
 								onClick={this.handleLoginSubmit}>
-								Sign In <i class="material-icons right">send</i></button>
+								Sign In <i className="material-icons right">send</i></button>
 						</form>
 					</div>
 				</Modal>
@@ -439,7 +439,7 @@ export default class Nav extends React.Component {
 								className="btn waves-effect waves-light blue"
 								type="submit"
 								onClick={this.handleSignupSubmit}>
-								Sign Up <i class="material-icons right">send</i></button>
+								Sign Up <i className="material-icons right">send</i></button>
 						</form>
 					</div>
 				</Modal>
