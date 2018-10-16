@@ -28,14 +28,18 @@ class MovieInfo extends Component {
 			});
 		});
 	}
-
+	goBack(event) {
+		event.preventDefault()
+		console.log(“clicked”)
+		window.location.replace(`http://localhost:3000/movielist/${sessionStorage.getItem("username").slice(1, -1)}`)
+	}
 	render() {
 		return (
 			<Wrapper>
 				<table className="animated fadeInDownBig">
 					<tbody>
 						<tr>
-							<td className="td-poster"><button className="btn waves-effect waves-light back-button red" type="submit" name="action">Go Back
+							<td className="td-poster"><button className="btn waves-effect waves-light back-button red" onClick={this.goBack} type="submit" name="action">Go Back
     <i className="material-icons left">keyboard_backspace</i>
 							</button><img src={this.state.movie.Poster === "N/A" || !this.state.movie.Poster ? "/nopicture.png" : this.state.movie.Poster} alt="Movie Poster" className="movie-poster-detailed"></img></td>
 							<td>{this.state.movie.Response === "True" ? (
