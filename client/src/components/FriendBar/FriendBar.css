@@ -1,0 +1,10 @@
+.input-text {
+    color: rgb(56, 95, 224);
+}
+
+.search-button {
+    background-color: #00c853;
+    border: none;
+    border-radius: 5px;
+    text-shadow: 1px 1px #000;
+}
