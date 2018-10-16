@@ -9,6 +9,7 @@ const userSchema = new Schema({
   password: { type: String, required: true },
   movieData: { type: String},
   movieArr: { type: Array},
+  friendsArray: {type: Array},
   createdAt: { type: Date, default: Date.now }
 });
 
