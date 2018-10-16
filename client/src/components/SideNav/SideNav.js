@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./SideNav.css";
+import FriendBar from "../FriendBar";
 
 class SideNav extends Component {
-
 
   handleUserLogout = event => {
     event.preventDefault()
@@ -16,26 +16,42 @@ class SideNav extends Component {
 
   }
 
-
   render() {
     return (
       <div className="SideNav animated fadeInLeftBig delay-1s">
         <ul>
 
           <li>
-            <a className="small material-icons modal-trigger tooltipped" href="#modal2" id="person_add" data-position="right" data-tooltip="add friend">person_add</a>
-            <div id="modal2" className="modal modal-fixed-footer">
+            <a className="small material-icons modal-trigger tooltipped" href="#modal2" id="add" data-position="right" data-tooltip="Add Friends">playlist_add</a>
+            <div id="modal2" className="modal bottom-sheet">
               <div className="modal-content">
-                <h4>Add Friend</h4>
+                <h4>Add Friends</h4>
+                <FriendBar />
+
               </div>
               <div className="modal-footer">
-                <a href="#!" className="modal-close waves-effect waves-green btn-flat">Done</a>
+                <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
               </div>
             </div>
           </li>
 
           <li>
-            <a className="small material-icons tooltipped" href="##" id="chat" data-position="right" data-tooltip="Chat">chat</a>
+            <a className="small material-icons modal-trigger tooltipped" href="#modal1" id="contact_mail" data-position="right" data-tooltip="Contact Us">contact_mail</a>
+            <div id="modal1" className="modal modal-fixed-footer">
+              <div className="modal-content">
+                <h4>Contact Us</h4>
+
+                <form method="POST" action="https://formspree.io/thomaschsu+mml@gmail.com">
+                  <input type="email" name="email" placeholder="Your Email Address" />
+                  <textarea name="message" placeholder="Your message"></textarea>
+                  <button type="submit">Send</button>
+                </form>
+
+              </div>
+              <div className="modal-footer">
+                <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
+              </div>
+            </div>
           </li>
 
           <li>
@@ -47,7 +63,5 @@ class SideNav extends Component {
     )
   }
 }
-
-
 
 export default SideNav;
