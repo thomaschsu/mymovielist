@@ -5,5 +5,5 @@ router.route("/:user")
   .get(moviesController.findAll)
   .post(moviesController.addMovie)
   .put(moviesController.updateMovie);
-
+  
 module.exports = router;
