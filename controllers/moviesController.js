@@ -65,5 +65,16 @@ module.exports = {
 			response = urlStart + response;
 			return res.json(response);
 		});
+	},
+	addFriend: function (req, res) {
+		console.log("-----REQ.BODY-----")
+		console.log(req.params.user)
+		console.log("-----REQ.BODY-----")
+		db.User
+			.updateOne(
+				{ username: req.params.user },
+				{ $addToSet: { friendsArray: req.body } }
+			).then(dbModel => res.json(dbModel))
+			.catch(err => res.status(422).json(err));
 	}
 };
