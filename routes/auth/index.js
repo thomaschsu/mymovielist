@@ -3,18 +3,6 @@ const router = express.Router()
 const User = require('../../models/user')
 const passport = require('../../passport')
 
-////This is supposed to work with the google account sign in button. It does, but it also reveals ALL
-////of the user's private google info. We pulled it out of the app before presentation as a result.
-
-// router.get('/google', passport.authenticate('google', { scope: ['profile'] }))
-// router.get(
-// 	'/google/callback',
-// 	passport.authenticate('google', {
-// 		successRedirect: '/',
-// 		failureRedirect: '/login'
-// 	})
-// )
-
 // this route is just used to get the user basic info
 router.get('/user', function(req, res) {
 	User.find({}, function(err, docs) {
@@ -26,16 +14,14 @@ router.get('/user', function(req, res) {
 
 })
 
-
-
-	/*console.log('===== logged in user below ======')
-	console.log(req.user)
-	if (req.user) {
-		return res.json({ user: req.user })
-	} else {
-		return res.json({ user: null })
-	}*/
-
+router.get('/friends', function(req, res) {
+	User.find({}, function(err, docs) {
+		if (!err) {
+			// console.log("here") for some reason, if I dont have anything here it cannot get the API call
+			res.json(docs)
+		} else {throw err;}
+	});
+})
 
 router.post('/login', (req, res, next) => {
 		console.log(req.body)
