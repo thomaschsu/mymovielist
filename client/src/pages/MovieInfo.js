@@ -30,7 +30,7 @@ class MovieInfo extends Component {
 	}
 	goBack(event) {
 		event.preventDefault()
-		console.log(“clicked”)
+		console.log("clicked")
 		window.location.replace(`http://localhost:3000/movielist/${sessionStorage.getItem("username").slice(1, -1)}`)
 	}
 	render() {
