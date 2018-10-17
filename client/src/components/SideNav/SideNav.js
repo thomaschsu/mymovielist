@@ -22,10 +22,10 @@ class SideNav extends Component {
         <ul>
 
           <li>
-            <a className="small material-icons modal-trigger tooltipped" href="#modal2" id="add" data-position="right" data-tooltip="Add Friends">playlist_add</a>
+            <a className="small material-icons modal-trigger tooltipped" href="#modal2" id="add" data-position="right" data-tooltip="Search Friends">playlist_add</a>
             <div id="modal2" className="modal bottom-sheet">
               <div className="modal-content">
-                <h4>Add Friends</h4>
+                <h4>Search Friends</h4>
                 <FriendBar />
 
               </div>

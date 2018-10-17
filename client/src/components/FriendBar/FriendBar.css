@@ -8,3 +8,13 @@
     border-radius: 5px;
     text-shadow: 1px 1px #000;
 }
+
+.friend-button {
+    margin-left: 5px;
+}
+
+.friend-name {
+    float: left;
+    position: relative;
+    top: 5px;
+}

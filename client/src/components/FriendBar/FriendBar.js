@@ -41,7 +41,7 @@ class FriendBar extends Component {
 		let friend = event.target.id
 		window.location.replace("http://localhost:3000/movielist/" + friend)
 		// API.addFriend(sessionStorage.getItem("username").slice(1, -1), friend).then(console.log("added"))
-		}
+	}
 
 	userCall() {
 		axios.get('/auth/friends').then(response => {
@@ -52,12 +52,13 @@ class FriendBar extends Component {
 					foundFriends.push(currentFriend)
 					newF = foundFriends.map((f) =>
 						<div>
-							<li>{f}</li>
-							<a onClick={this.addFriend} className="btn-floating btn-small waves-effect waves-light green"><i id={f} className="material-icons">add</i></a>
+							<li className="friend-name">{f}</li>
+							<a onClick={this.addFriend} className="btn-floating btn-small waves-effect waves-light green friend-button"><i id={f} className="material-icons">search
+</i></a>
 							<hr></hr>
 						</div>
 					)
-					
+
 				}
 			}
 		})
