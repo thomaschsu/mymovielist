@@ -99,8 +99,8 @@ class Search extends Component {
 			<div>
 				<Wrapper>
 					<SearchBar changefunc={this.handleInputChange} submitfunc={this.handleFormSubmit} />
-					{this.state.results.length > 0 && this.state.page > 1 ? <button onClick={this.handlePagination} className="previous-page"><i class="small material-icons">chevron_left</i></button> : ""}
-					{this.state.results.length > 0 && this.state.page < this.state.maxPage ? <button onClick={this.handlePagination} className="next-page"><i class="small material-icons">chevron_right</i></button> : ""}
+					{this.state.results.length > 0 && this.state.page > 1 ? <button onClick={this.handlePagination} className="previous-page"><i className="small material-icons">chevron_left</i></button> : ""}
+					{this.state.results.length > 0 && this.state.page < this.state.maxPage ? <button onClick={this.handlePagination} className="next-page"><i className="small material-icons">chevron_right</i></button> : ""}
 					<div>
 						{this.state.results.map(element => <SearchResult title={element.Title} image={element.Poster} year={element.Year} key={element.imdbID} imdb={element.imdbID} click={this.handleAddToList} added={this.state.listIds.includes(element.imdbID)} />)}
 					</div>
