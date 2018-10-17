@@ -69,7 +69,7 @@ class MovieInfo extends Component {
 										<p className="movie-information"><b>Producer: </b>{this.state.movie.Production}</p>
 										<p className="movie-information"><b>Awards: </b>{this.state.movie.Awards}</p>
 									</div>
-									<iframe className="iframe-trailer" width="720" height="350" title="movie-trailer" src={this.state.trailerUrl} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									<iframe className="iframe-trailer" width="720" height="350" title="movie-trailer" src={this.state.trailerUrl} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
 								</div>
 							) : <h2>Movie not found</h2>}</td>
 						</tr>
