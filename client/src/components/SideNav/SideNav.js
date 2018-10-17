@@ -6,7 +6,7 @@ class SideNav extends Component {
 
   handleUserLogout = event => {
     event.preventDefault()
-    window.location.replace("http://localhost:3000/")
+    window.location.replace("/")
     console.log("log me out")
     sessionStorage.clear()
     sessionStorage.setItem("logout", "hidden")
