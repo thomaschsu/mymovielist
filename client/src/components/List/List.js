@@ -10,10 +10,10 @@ const List = (props) => {
 			<tr className="table-head">
 				<th className="status"></th>
 				<th>Image</th>
-				<th><a onClick={props.sort}>Movie Title</a></th>
-				<th><a onClick={props.sort}>Score</a></th>
-				<th><a onClick={props.sort}>Status</a></th>
-				<th><a onClick={props.sort}>Director</a></th>
+				<th>Movie Title</th>
+				<th>Score</th>
+				<th>Status</th>
+				<th>Director</th>
 				<th className="delete"></th>
 			</tr>
 		  </thead>

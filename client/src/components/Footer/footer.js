@@ -16,7 +16,7 @@ class Footer extends Component {
   }
 
   componentDidMount() {
-    console.log(sessionStorage.length);
+    //console.log(sessionStorage.length);
     if (sessionStorage.length === 0) {
       this.setState({
         loginError: false

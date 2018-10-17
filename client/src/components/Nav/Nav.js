@@ -71,7 +71,7 @@ export default class Nav extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log(sessionStorage.length);
+		//console.log(sessionStorage.length);
 		if (sessionStorage.length === 0) {
 			this.setState({
 				loginError: false
@@ -108,7 +108,7 @@ export default class Nav extends React.Component {
 			})
 			.then(response => {
 				if (!response.data.errmsg) {
-					console.log('User added.')
+					//console.log('User added.')
 					this.setState({
 						firstName: "",
 						lastName: "",
@@ -118,7 +118,7 @@ export default class Nav extends React.Component {
 						modal2IsOpen: false
 					})
 				} else {
-					console.log('Duplicate Username found.')
+					//console.log('Duplicate Username found.')
 					this.setState({
 						usernameError: false
 					})
@@ -140,7 +140,7 @@ export default class Nav extends React.Component {
 			let pwd = d[passwordIndex];
 
 			if ((jQuery.inArray(a, d) !== -1) && pwd === b) {
-				console.log("YES")
+				//console.log("YES")
 				sessionStorage.setItem("username", JSON.stringify(a))
 				sessionStorage.setItem("logout", "")
 				sessionStorage.setItem("signin", "hidden")
@@ -161,7 +161,7 @@ export default class Nav extends React.Component {
 	handleUserLogout(event) {
 		event.preventDefault()
 		window.location.replace("http://localhost:3000/")
-		console.log("log me out")
+		//console.log("log me out")
 		sessionStorage.clear()
 		sessionStorage.setItem("logout", "hidden")
 		sessionStorage.setItem("signin", "")
@@ -191,7 +191,7 @@ export default class Nav extends React.Component {
 
 	/*_logout(event) {
 	  event.preventDefault()
-	  console.log('logging out')
+	  //console.log('logging out')
 	  axios.post('/auth/logout').then(response => {
 
 		if (response.status === 200) {
@@ -240,7 +240,7 @@ export default class Nav extends React.Component {
 
 
 	/*renderLogButtons = (bol) =>{
-  console.log('this runs')
+  //console.log('this runs')
 	  if(bol === true){
 		return(<a className=' waves-effect waves-light btn modal-trigger' id="logOutButton" onClick={this.handleUserLogout} >Log Out</a>)
 	  } else{
@@ -253,7 +253,7 @@ export default class Nav extends React.Component {
 
 
 	render() {
-		console.log(this.state)
+		//console.log(this.state)
 		return (
 			<nav className="bg-primary nav animated fadeIn delay-2s">
 				<span className="navbar-brand" to="/">
