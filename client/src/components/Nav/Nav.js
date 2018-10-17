@@ -153,14 +153,14 @@ export default class Nav extends React.Component {
 					// hideSignup: "hidden"
 					logIn: true
 				})
-				window.location.replace(`http://localhost:3000/movielist/${sessionStorage.getItem("username").slice(1, -1)}`)
+				window.location.replace(`/movielist/${sessionStorage.getItem("username").slice(1, -1)}`)
 			}
 		})
 	}
 
 	handleUserLogout(event) {
 		event.preventDefault()
-		window.location.replace("http://localhost:3000/")
+		window.location.replace("/")
 		//console.log("log me out")
 		sessionStorage.clear()
 		sessionStorage.setItem("logout", "hidden")
