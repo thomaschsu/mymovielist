@@ -2,10 +2,10 @@ import axios from "axios";
 
 export default {
 	search: (title, page) => {
-		return axios.get(`http://www.omdbapi.com/?apikey=d546d0cf&s=${title}&type=movie&page=${page}`);
+		return axios.get(`https://www.omdbapi.com/?apikey=d546d0cf&s=${title}&type=movie&page=${page}`);
 	},
 	searchOne: id => {
-		return axios.get(`http://www.omdbapi.com/?apikey=d546d0cf&i=${id}`);
+		return axios.get(`https://www.omdbapi.com/?apikey=d546d0cf&i=${id}`);
 	},
 	getMovies: function(user) {
 		return axios.get(`/api/list/${user}`);
