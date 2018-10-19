@@ -28,11 +28,10 @@ What exactly is My Movie List? Is it a copy of My Anime List? No, definitely not
 5. MongoDB
 6. Node.js / NPM
 7. Express
-8. ORM
-9. Heroku
-10. API
-11. CLI
-12. Font Awesome
+8. Heroku
+9. API
+10. CLI
+11. Font Awesome
 
 - - - 
 ### Heroku Live Link
